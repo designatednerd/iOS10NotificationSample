@@ -55,7 +55,23 @@ enum ParrotGif: String {
     partyparrot,
     slowparrot
     
-    func animated() -> UIImage? {
-        return UIImage.dns_gifWith(name: self.rawValue)
+    func animated() -> UIImage {
+        guard let gif = UIImage.dns_gifWith(name: self.rawValue) else {
+            fatalError("Could not load gif for \(self.rawValue)")
+        }
+        
+        return gif
+    }
+    
+    static func wave() -> [UIImage] {
+        return [
+            self.parrotwave1.animated(),
+            self.parrotwave2.animated(),
+            self.parrotwave3.animated(),
+            self.parrotwave4.animated(),
+            self.parrotwave5.animated(),
+            self.parrotwave6.animated(),
+            self.parrotwave7.animated(),
+        ]
     }
 }

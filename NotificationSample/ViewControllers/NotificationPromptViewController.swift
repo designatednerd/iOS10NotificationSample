@@ -11,6 +11,24 @@ import UIKit
 class NotificationPromptViewController: UIViewController {
     
     var notificationHandler: VersionSpecificNotificationHandler!
+    
+    @IBOutlet var parrotImageViews: [UIImageView]!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let waveImages = ParrotGif.wave()
+        
+        for i in 0..<self.parrotImageViews.count {
+            let imageView = self.parrotImageViews[i]
+            let imageIndex = i % waveImages.count
+            let image = waveImages[imageIndex]
+            
+            imageView.image = image
+        }
+    }
+    
 
     @IBAction private func nope() {
         self.dismiss(animated: true, completion: nil)

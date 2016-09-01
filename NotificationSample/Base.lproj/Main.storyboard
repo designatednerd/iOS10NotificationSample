@@ -40,6 +40,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="kNZ-tc-cRD">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="6fc-YM-gj6"/>
+                                            <constraint firstAttribute="height" constant="25" id="UIg-dN-LGL"/>
+                                        </constraints>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wa7-bi-uz7">
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Ask For Notification Permission">
@@ -66,20 +72,12 @@
                                     <constraint firstItem="I2Z-Vv-53F" firstAttribute="leading" secondItem="RVn-uf-WXW" secondAttribute="leading" id="mEs-aF-bNJ"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="kNZ-tc-cRD">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="6fc-YM-gj6"/>
-                                    <constraint firstAttribute="height" constant="25" id="UIg-dN-LGL"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RVn-uf-WXW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8D7-ud-pRR"/>
                             <constraint firstItem="RVn-uf-WXW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="AXN-RX-gjc"/>
                             <constraint firstItem="RVn-uf-WXW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DLs-Ma-FU1"/>
-                            <constraint firstItem="RVn-uf-WXW" firstAttribute="top" secondItem="kNZ-tc-cRD" secondAttribute="bottom" constant="10" id="lWU-BK-YUR"/>
-                            <constraint firstItem="kNZ-tc-cRD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r2P-lh-r9O"/>
                             <constraint firstAttribute="trailing" secondItem="RVn-uf-WXW" secondAttribute="trailing" constant="20" id="x91-IW-qMe"/>
                         </constraints>
                     </view>
@@ -109,6 +107,17 @@
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9fq-Wr-PKC">
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8Q-mf-gDQ">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="cKD-Iq-Czr"/>
+                                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="uQH-2O-O1d"/>
+                                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="2IS-8N-6Tn"/>
+                                            <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="t5s-d2-xnZ"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="PYZ-VU-aSn"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="OOl-Em-qf9"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="tF9-mt-B13"/>
+                                        </subviews>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pretty Please?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TXg-7n-l50">
                                         <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                         <nil key="textColor"/>
@@ -160,6 +169,15 @@
                             <constraint firstItem="9fq-Wr-PKC" firstAttribute="centerY" secondItem="Vwi-fv-IM7" secondAttribute="centerY" id="tq0-0F-PiK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="parrotImageViews" destination="cKD-Iq-Czr" collectionClass="NSMutableArray" id="xmZ-Fn-wjd"/>
+                        <outletCollection property="parrotImageViews" destination="uQH-2O-O1d" collectionClass="NSMutableArray" id="ASR-dZ-faA"/>
+                        <outletCollection property="parrotImageViews" destination="2IS-8N-6Tn" collectionClass="NSMutableArray" id="1lf-aP-pic"/>
+                        <outletCollection property="parrotImageViews" destination="t5s-d2-xnZ" collectionClass="NSMutableArray" id="x7K-D1-3Gh"/>
+                        <outletCollection property="parrotImageViews" destination="PYZ-VU-aSn" collectionClass="NSMutableArray" id="kLZ-bS-pTw"/>
+                        <outletCollection property="parrotImageViews" destination="OOl-Em-qf9" collectionClass="NSMutableArray" id="Y8e-bM-ezC"/>
+                        <outletCollection property="parrotImageViews" destination="tF9-mt-B13" collectionClass="NSMutableArray" id="nIE-0V-JnN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7S-ZQ-QeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
