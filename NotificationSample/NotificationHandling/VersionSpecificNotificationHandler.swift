@@ -11,6 +11,11 @@ import UIKit
 
 //MARK: Protocol declaration
 
+enum NotificationCategory: String {
+    case
+    partyRequest = "com.example.notificaton.partyrequest"
+}
+
 protocol VersionSpecificNotificationHandler {
     
     func handleActionWithIdentifier(identifier: String?,
@@ -30,6 +35,8 @@ protocol VersionSpecificNotificationHandler {
     func application(_ application: UIApplication,
                      didReceiveRemoteNotification userInfo: [AnyHashable : Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Swift.Void)
+    
+    func scheduleNotification(for parrot: PartyParrot, delay: TimeInterval)
 }
 
 //MARK: Default implementation

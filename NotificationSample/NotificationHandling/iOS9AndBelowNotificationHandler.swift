@@ -68,4 +68,18 @@ extension iOS9AndBelowNotificationHandler: VersionSpecificNotificationHandler {
         
         permissionsGranted(self.areAnyNotificationsEnabled(in: settings))
     }
+    
+    func scheduleNotification(for parrot: PartyParrot, delay: TimeInterval) {
+        let notification = UILocalNotification()
+        
+        notification.fireDate = Date().addingTimeInterval(delay)
+        
+        //You have to use the body instead of the title or it won't 
+        //actually show as a notification because ¯\_(ツ)_/¯
+        notification.alertBody = "\(parrot.name) wants to join the party!"
+        notification.soundName = UILocalNotificationDefaultSoundName
+        notification.userInfo = parrot.toUserInfo()
+        
+        UIApplication.shared.scheduleLocalNotification(notification)
+    }
 }

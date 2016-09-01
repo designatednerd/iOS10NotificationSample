@@ -48,6 +48,8 @@ extension iOS10NotificationHandler: UNUserNotificationCenterDelegate {
     }
 }
 
+//MARK: - VersionSpecificNotificationHandler conformance
+
 @available(iOS 10.0, *)
 extension iOS10NotificationHandler: VersionSpecificNotificationHandler {
     
@@ -104,6 +106,44 @@ extension iOS10NotificationHandler: VersionSpecificNotificationHandler {
                 case .authorized:
                     permissionsGranted(true)
                 }
+            }
+        }
+    }
+    
+    func scheduleNotification(for parrot: PartyParrot, delay: TimeInterval) {
+        
+        guard
+            let imageURL = Bundle.main.url(forResource: parrot.gif.rawValue, withExtension: "gif"),
+            let attachment = try? UNNotificationAttachment(identifier: parrot.gif.rawValue,
+                                                           url: imageURL,
+                                                           options: .none) else {
+            return
+        }
+        
+        
+        let content = UNMutableNotificationContent()
+        content.title = "\(parrot.name) wants to join the party!"
+        content.subtitle = "What would you like to do?"
+        content.body = "You can either add \(parrot.name) as a friend, block \(parrot.name), or add \(parrot.name) to your party."
+        content.attachments = [attachment]
+        
+        
+        //Note: For a remote notification to invoke your Notification Content extension, you'd need to add this same category identifier as the value for the category key in the payload dictionary.
+        content.categoryIdentifier = NotificationCategory.partyRequest.rawValue
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
+        
+        // 1
+        let request = UNNotificationRequest(identifier: parrot.gif.rawValue,
+                                            content: content,
+                                            trigger: trigger)
+        // 2
+        UNUserNotificationCenter.current().add(request) {
+            error in
+            if let error = error {
+                debugPrint("Error scheduling notification: \(error)")
+            } else {
+                debugPrint("Notification added!")
             }
         }
     }

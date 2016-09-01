@@ -23,6 +23,10 @@ class ViewController: UIViewController {
     
     var notificationHandler: VersionSpecificNotificationHandler!
     
+    private let parrots = PartyParrot.nonstandardParrots()
+    
+    //MARK: View Lifecycle
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -72,7 +76,6 @@ class ViewController: UIViewController {
     //MARK: - UI setup 
     
     private func userWasAskedForNotificationPermission(asked: Bool) {
-        
         if asked {
             self.askedLabel.text = "👍"
             self.askButton.isEnabled = false
@@ -102,6 +105,11 @@ class ViewController: UIViewController {
     //MARK: - IBActions
     
     @IBAction private func sendTestNotification() {
-        NSLog("O HAI")
+        let randomIndex = Int(arc4random_uniform(UInt32(self.parrots.count)))
+        
+        let parrot = self.parrots[randomIndex]
+        
+        self.notificationHandler.scheduleNotification(for: parrot,
+                                                      delay: 5)        
     }
 }

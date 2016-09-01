@@ -19,6 +19,11 @@ struct PartyParrot {
         image_name
     }
     
+    init(name: String, gif: ParrotGif) {
+        self.name = name
+        self.gif = gif
+    }
+    
     init?(userInfo: [AnyHashable : Any]) {
         guard
             let name = userInfo[ParrotJSONKey.name.rawValue] as? String,
@@ -27,8 +32,32 @@ struct PartyParrot {
                 return nil
         }
         
-        self.name = name
-        self.gif = gif
+        self.init(name: name, gif: gif)
+    }
+    
+    func toUserInfo() -> [String: String] {
+        var userInfo = [String : String]()
+        
+        userInfo[ParrotJSONKey.name.rawValue] = self.name
+        userInfo[ParrotJSONKey.image_name.rawValue] = self.gif.rawValue
+        
+        return userInfo
+    }
+    
+    static func nonstandardParrots() -> [PartyParrot] {
+        return [
+            PartyParrot(name: "Aussie Parrot", gif: .aussieparrot),
+            PartyParrot(name: "Bored Parrot", gif: .boredparrot),
+            PartyParrot(name: "Chill Parrot", gif: .chillparrot),
+            PartyParrot(name: "Deal With It Parrot", gif: .dealwithitparrot),
+            PartyParrot(name: "Fast Parrot", gif: .fastparrot),
+            PartyParrot(name: "Fiesta Parrot", gif: .fiestaparrot),
+            PartyParrot(name: "Goth Parrot", gif: .gothparrot),
+            PartyParrot(name: "Ice Cream Party Parrot", gif: .icecreamparrot),
+            PartyParrot(name: "Old-Timey Parrot", gif: .oldtimeyparrot),
+            PartyParrot(name: "Cop Parrot", gif: .parrotcop),
+            PartyParrot(name: "Slow Parrot", gif: .slowparrot),
+        ]
     }
 }
 
@@ -75,3 +104,5 @@ enum ParrotGif: String {
         ]
     }
 }
+
+

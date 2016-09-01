@@ -20,10 +20,10 @@ struct ParrotAPIController {
     }
     
     static func add(parrot: PartyParrot) {
-    
+        //Add parrot as friend
     }
     
     static func block(parrot: PartyParrot) {
-    
+        //block parrot.
     }
 }
