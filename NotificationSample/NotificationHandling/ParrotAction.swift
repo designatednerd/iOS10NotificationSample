@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 enum ParrotAction: String {
     case
@@ -23,5 +24,30 @@ enum ParrotAction: String {
         case .partyWith:
             Party.current.add(parrot: parrot)
         }
+    }
+    
+    @available(iOS 10, *)
+    static func configureNotificationActions() {
+        let blockAction = UNNotificationAction(identifier: ParrotAction.block.rawValue,
+                                               title: "Block Parrot")
+        
+        let addAction = UNNotificationAction(identifier: ParrotAction.add.rawValue,
+                                             title: "Add Parrot as Friend")
+        
+        let partyWithAction = UNNotificationAction(identifier: ParrotAction.partyWith.rawValue,
+                                                   title: "Party With Parrot")
+
+        let category =
+            UNNotificationCategory(identifier: NotificationCategory.partyRequest.rawValue,
+                                   actions: [
+                                    blockAction,
+                                    addAction,
+                                    partyWithAction,
+                                   ],
+                                   intentIdentifiers: [])
+        
+        UNUserNotificationCenter
+            .current()
+            .setNotificationCategories([category])
     }
 }

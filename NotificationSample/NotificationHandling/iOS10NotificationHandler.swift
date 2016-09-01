@@ -17,6 +17,9 @@ class iOS10NotificationHandler: NSObject {
         super.init()        
         //Set this object as the delegate to the user notification center
         UNUserNotificationCenter.current().delegate = self
+        
+        //Set up actions
+        ParrotAction.configureNotificationActions()
     }
 }
 
@@ -61,7 +64,7 @@ extension iOS10NotificationHandler: VersionSpecificNotificationHandler {
                 status(settings.authorizationStatus)
         }
     }
-
+    
     func hasUserBeenAskedAboutPushNotifications(hasBeenAsked: @escaping (Bool) -> ()) {
         self.getAuthStatus() {
             status in

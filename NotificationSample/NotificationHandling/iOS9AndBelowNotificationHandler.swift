@@ -37,7 +37,6 @@ class iOS9AndBelowNotificationHandler {
 @available(iOS, deprecated: 10.0)
 extension iOS9AndBelowNotificationHandler: VersionSpecificNotificationHandler {
     
-
     func hasUserBeenAskedAboutPushNotifications(hasBeenAsked: @escaping (Bool) -> ()) {
         //Theoretically you could query UIApplication.shared.isRegisteredForRemoteNotifications,
         //but that will return no if the user has been asked and declined notifications.
