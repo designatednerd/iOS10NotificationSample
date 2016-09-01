@@ -22,7 +22,7 @@ struct Party {
         self.parrots = self.parrots.filter() {
                             parrot in
                             guard (parrot.name != parrotToBlock.name
-                                && parrot.imageName != parrotToBlock.imageName) else {
+                                && parrot.gif != parrotToBlock.gif) else {
                                 return false
                             }
                         

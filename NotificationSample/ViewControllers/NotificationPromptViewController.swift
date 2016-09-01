@@ -9,6 +9,18 @@
 import UIKit
 
 class NotificationPromptViewController: UIViewController {
-
     
+    var notificationHandler: VersionSpecificNotificationHandler!
+
+    @IBAction private func nope() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction private func yup() {
+        self.notificationHandler.requestNotificationPermissionsWithCompletion {
+            [weak self]
+            granted in
+            self?.dismiss(animated: true, completion: nil)
+        }
+    }
 }

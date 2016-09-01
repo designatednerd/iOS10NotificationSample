@@ -20,7 +20,7 @@
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RVn-uf-WXW">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has the user been asked about push notifications? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifJ-e9-C6w" userLabel="Has the user been asked about push notifications?">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has the user been asked about notification permissions? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifJ-e9-C6w" userLabel="Has the user been asked about push notifications?">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -30,7 +30,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has the user enabled push notifications?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsw-X8-S6n">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has the user enabled notifications?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsw-X8-S6n">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -40,27 +40,46 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wa7-bi-uz7">
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Ask For Notification Permission">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="lIa-3k-FWd" kind="presentation" identifier="ToNotificationPrompt" id="egd-UO-4nh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2Z-Vv-53F">
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Send A Test Notification">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendTestNotification" destination="BYZ-38-t0r" eventType="touchUpInside" id="JAZ-Cu-ci0"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Wa7-bi-uz7" firstAttribute="leading" secondItem="RVn-uf-WXW" secondAttribute="leading" id="Ppz-yC-G8U"/>
+                                    <constraint firstAttribute="trailing" secondItem="I2Z-Vv-53F" secondAttribute="trailing" id="StG-cP-9uV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wa7-bi-uz7" secondAttribute="trailing" id="kmC-50-qaE"/>
+                                    <constraint firstItem="I2Z-Vv-53F" firstAttribute="leading" secondItem="RVn-uf-WXW" secondAttribute="leading" id="mEs-aF-bNJ"/>
+                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wa7-bi-uz7">
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Ask For Push Permission">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="askForPermissions" destination="BYZ-38-t0r" eventType="touchUpInside" id="3wf-jU-3dV"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="kNZ-tc-cRD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="6fc-YM-gj6"/>
+                                    <constraint firstAttribute="height" constant="25" id="UIg-dN-LGL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RVn-uf-WXW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8D7-ud-pRR"/>
                             <constraint firstItem="RVn-uf-WXW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="AXN-RX-gjc"/>
-                            <constraint firstItem="Wa7-bi-uz7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="DFQ-2y-PkC"/>
                             <constraint firstItem="RVn-uf-WXW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DLs-Ma-FU1"/>
-                            <constraint firstAttribute="trailing" secondItem="Wa7-bi-uz7" secondAttribute="trailing" constant="20" id="PVb-Kq-gfp"/>
-                            <constraint firstItem="Wa7-bi-uz7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pgi-rv-xYP"/>
-                            <constraint firstItem="Wa7-bi-uz7" firstAttribute="top" secondItem="RVn-uf-WXW" secondAttribute="bottom" constant="30" id="v7V-zy-Kxm"/>
+                            <constraint firstItem="RVn-uf-WXW" firstAttribute="top" secondItem="kNZ-tc-cRD" secondAttribute="bottom" constant="10" id="lWU-BK-YUR"/>
+                            <constraint firstItem="kNZ-tc-cRD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r2P-lh-r9O"/>
                             <constraint firstAttribute="trailing" secondItem="RVn-uf-WXW" secondAttribute="trailing" constant="20" id="x91-IW-qMe"/>
                         </constraints>
                     </view>
@@ -68,11 +87,86 @@
                         <outlet property="askButton" destination="Wa7-bi-uz7" id="hAR-1C-LUs"/>
                         <outlet property="askedLabel" destination="mPv-n3-JX8" id="xVF-al-fiT"/>
                         <outlet property="grantedLabel" destination="jpU-s4-nOc" id="Aze-Gk-3pG"/>
+                        <outlet property="parrotImageView" destination="kNZ-tc-cRD" id="iji-cF-GOa"/>
+                        <outlet property="sendTestNotificationButton" destination="I2Z-Vv-53F" id="aOE-tj-rC1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
+        <!--Notification Prompt View Controller-->
+        <scene sceneID="9S6-ln-aON">
+            <objects>
+                <viewController id="lIa-3k-FWd" customClass="NotificationPromptViewController" customModule="NotificationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vLe-e4-y9l"/>
+                        <viewControllerLayoutGuide type="bottom" id="rN7-Yc-H0b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vwi-fv-IM7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9fq-Wr-PKC">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pretty Please?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TXg-7n-l50">
+                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You should give us notification permissions, we only get one chance when we show the system dialog." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MS-E9-X2g">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(seriously, we won't spam you)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ed-ZV-Hjp">
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCU-2C-OKa">
+                                        <color key="backgroundColor" red="0.0" green="0.63053245708154504" blue="0.027050442828838093" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Sure!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="yup" destination="lIa-3k-FWd" eventType="touchUpInside" id="P2z-90-QEU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dff-yT-7i4">
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Hell No, I don't believe you!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nope" destination="lIa-3k-FWd" eventType="touchUpInside" id="njR-mA-YOJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TXg-7n-l50" firstAttribute="leading" secondItem="9fq-Wr-PKC" secondAttribute="leading" id="2iA-7q-YgY"/>
+                                    <constraint firstAttribute="trailing" secondItem="dff-yT-7i4" secondAttribute="trailing" id="D8Z-Mo-O4V"/>
+                                    <constraint firstAttribute="trailing" secondItem="TXg-7n-l50" secondAttribute="trailing" id="KfE-c3-3Na"/>
+                                    <constraint firstAttribute="trailing" secondItem="MCU-2C-OKa" secondAttribute="trailing" id="Zfs-kx-bhw"/>
+                                    <constraint firstItem="MCU-2C-OKa" firstAttribute="leading" secondItem="9fq-Wr-PKC" secondAttribute="leading" id="fGh-Xv-xU1"/>
+                                    <constraint firstItem="dff-yT-7i4" firstAttribute="leading" secondItem="9fq-Wr-PKC" secondAttribute="leading" id="lba-rp-VAT"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9fq-Wr-PKC" firstAttribute="leading" secondItem="Vwi-fv-IM7" secondAttribute="leading" constant="20" id="iK2-Wk-DD0"/>
+                            <constraint firstAttribute="trailing" secondItem="9fq-Wr-PKC" secondAttribute="trailing" constant="20" id="lRO-nC-9Jc"/>
+                            <constraint firstItem="9fq-Wr-PKC" firstAttribute="centerY" secondItem="Vwi-fv-IM7" secondAttribute="centerY" id="tq0-0F-PiK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7S-ZQ-QeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="139"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="partyparrot.gif" width="35" height="25"/>
+    </resources>
 </document>

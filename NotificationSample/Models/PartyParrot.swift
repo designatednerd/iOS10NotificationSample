@@ -11,7 +11,7 @@ import UIKit
 
 struct PartyParrot {
     let name: String
-    let imageName: String
+    let gif: ParrotGif
     
     enum ParrotJSONKey: String {
         case
@@ -19,18 +19,43 @@ struct PartyParrot {
         image_name
     }
     
-    var image: UIImage? {
-        return UIImage(named: self.imageName)
-    }
-    
     init?(userInfo: [AnyHashable : Any]) {
         guard
             let name = userInfo[ParrotJSONKey.name.rawValue] as? String,
-            let imageName = userInfo[ParrotJSONKey.image_name.rawValue] as? String else {
+            let imageName = userInfo[ParrotJSONKey.image_name.rawValue] as? String,
+            let gif = ParrotGif(rawValue: imageName) else {
                 return nil
         }
         
         self.name = name
-        self.imageName = imageName        
+        self.gif = gif
+    }
+}
+
+enum ParrotGif: String {
+    case
+    aussieparrot,
+    boredparrot,
+    chillparrot,
+    dealwithitparrot,
+    fastparrot,
+    fiestaparrot,
+    gothparrot,
+    icecreamparrot = "ice-cream-parrot",
+    oldtimeyparrot,
+    parrot,
+    parrotcop,
+    parrotwave1,
+    parrotwave2,
+    parrotwave3,
+    parrotwave4,
+    parrotwave5,
+    parrotwave6,
+    parrotwave7,
+    partyparrot,
+    slowparrot
+    
+    func animated() -> UIImage? {
+        return UIImage.dns_gifWith(name: self.rawValue)
     }
 }
