@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "336C7AF31D6167AC0037150A"
-               BuildableName = "NotificationSample.app"
-               BlueprintName = "NotificationSample"
+               BlueprintIdentifier = "336C7B341D6168F40037150A"
+               BuildableName = "AwesomeFramework.framework"
+               BlueprintName = "AwesomeFramework"
                ReferencedContainer = "container:NotificationSample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "336C7B3C1D6168F40037150A"
-               BuildableName = "AwesomeFrameworkTests.xctest"
-               BlueprintName = "AwesomeFrameworkTests"
-               ReferencedContainer = "container:NotificationSample.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "336C7AF31D6167AC0037150A"
-            BuildableName = "NotificationSample.app"
-            BlueprintName = "NotificationSample"
-            ReferencedContainer = "container:NotificationSample.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "336C7AF31D6167AC0037150A"
-            BuildableName = "NotificationSample.app"
-            BlueprintName = "NotificationSample"
+            BlueprintIdentifier = "336C7B341D6168F40037150A"
+            BuildableName = "AwesomeFramework.framework"
+            BlueprintName = "AwesomeFramework"
             ReferencedContainer = "container:NotificationSample.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "336C7AF31D6167AC0037150A"
-            BuildableName = "NotificationSample.app"
-            BlueprintName = "NotificationSample"
+            BlueprintIdentifier = "336C7B341D6168F40037150A"
+            BuildableName = "AwesomeFramework.framework"
+            BlueprintName = "AwesomeFramework"
             ReferencedContainer = "container:NotificationSample.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
