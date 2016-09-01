@@ -114,7 +114,6 @@ extension iOS10NotificationHandler: VersionSpecificNotificationHandler {
     }
     
     func scheduleNotification(for parrot: PartyParrot, delay: TimeInterval) {
-        
         guard
             let imageURL = Bundle.main.url(forResource: parrot.gif.rawValue, withExtension: "gif"),
             let attachment = try? UNNotificationAttachment(identifier: parrot.gif.rawValue,
@@ -122,7 +121,6 @@ extension iOS10NotificationHandler: VersionSpecificNotificationHandler {
                                                            options: .none) else {
             return
         }
-        
         
         let content = UNMutableNotificationContent()
         content.title = "\(parrot.name) wants to join the party!"
@@ -134,13 +132,15 @@ extension iOS10NotificationHandler: VersionSpecificNotificationHandler {
         //Note: For a remote notification to invoke your Notification Content extension, you'd need to add this same category identifier as the value for the category key in the payload dictionary.
         content.categoryIdentifier = NotificationCategory.partyRequest.rawValue
         
+        //Set up a time-based trigger
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
         
-        // 1
+        //Set up the request based on the trigger.
         let request = UNNotificationRequest(identifier: parrot.gif.rawValue,
                                             content: content,
                                             trigger: trigger)
-        // 2
+        
+        //Schedule the notification
         UNUserNotificationCenter.current().add(request) {
             error in
             if let error = error {
