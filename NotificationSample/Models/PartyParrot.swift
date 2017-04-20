@@ -82,6 +82,7 @@ enum ParrotGif: String {
     parrotwave6,
     parrotwave7,
     partyparrot,
+    sadparrot,
     slowparrot
     
     var animated: UIImage {

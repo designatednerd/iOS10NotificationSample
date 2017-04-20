@@ -98,6 +98,7 @@ class ViewController: UIViewController {
             self.grantedLabel.text = "👎"
             self.sendTestNotificationButton.isEnabled = false
             self.sendTestNotificationButton.alpha = 0.5
+            self.parrotImageView.image = ParrotGif.sadparrot.animated
         }
     }
     
