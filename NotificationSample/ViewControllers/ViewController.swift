@@ -23,15 +23,14 @@ class ViewController: UIViewController {
     
     var notificationHandler: VersionSpecificNotificationHandler!
     
-    private let parrots = PartyParrot.nonstandardParrots()
+    private let parrots = PartyParrot.nonstandardParrots
     
     //MARK: View Lifecycle
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //Actually make this animate. 
-        self.parrotImageView.image = UIImage.dns_gifWith(name: ParrotGif.partyparrot.rawValue)
+        self.parrotImageView.image = ParrotGif.partyparrot.animated
         
         guard let notificationHandler = self.notificationHandler else {
             assertionFailure("You're gonna want a notification handler to actually load this stuff")

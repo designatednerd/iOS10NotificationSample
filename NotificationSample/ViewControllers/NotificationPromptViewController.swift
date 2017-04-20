@@ -18,7 +18,7 @@ class NotificationPromptViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let waveImages = ParrotGif.wave()
+        let waveImages = ParrotGif.wave
         
         for i in 0..<self.parrotImageViews.count {
             let imageView = self.parrotImageViews[i]

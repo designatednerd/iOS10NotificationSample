@@ -35,7 +35,7 @@ struct PartyParrot {
         self.init(name: name, gif: gif)
     }
     
-    func toUserInfo() -> [String: String] {
+    var userInfo: [String: String] {
         var userInfo = [String : String]()
         
         userInfo[ParrotJSONKey.name.rawValue] = self.name
@@ -44,7 +44,7 @@ struct PartyParrot {
         return userInfo
     }
     
-    static func nonstandardParrots() -> [PartyParrot] {
+    static var nonstandardParrots: [PartyParrot] {
         return [
             PartyParrot(name: "Aussie Parrot", gif: .aussieparrot),
             PartyParrot(name: "Bored Parrot", gif: .boredparrot),
@@ -84,7 +84,7 @@ enum ParrotGif: String {
     partyparrot,
     slowparrot
     
-    func animated() -> UIImage {
+    var animated: UIImage {
         guard let gif = UIImage.dns_gifWith(name: self.rawValue) else {
             fatalError("Could not load gif for \(self.rawValue)")
         }
@@ -92,15 +92,15 @@ enum ParrotGif: String {
         return gif
     }
     
-    static func wave() -> [UIImage] {
+    static var wave: [UIImage] {
         return [
-            self.parrotwave1.animated(),
-            self.parrotwave2.animated(),
-            self.parrotwave3.animated(),
-            self.parrotwave4.animated(),
-            self.parrotwave5.animated(),
-            self.parrotwave6.animated(),
-            self.parrotwave7.animated(),
+            self.parrotwave1.animated,
+            self.parrotwave2.animated,
+            self.parrotwave3.animated,
+            self.parrotwave4.animated,
+            self.parrotwave5.animated,
+            self.parrotwave6.animated,
+            self.parrotwave7.animated,
         ]
     }
 }

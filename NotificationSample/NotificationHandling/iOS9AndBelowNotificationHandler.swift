@@ -77,7 +77,7 @@ extension iOS9AndBelowNotificationHandler: VersionSpecificNotificationHandler {
         //actually show as a notification because ¯\_(ツ)_/¯
         notification.alertBody = "\(parrot.name) wants to join the party!"
         notification.soundName = UILocalNotificationDefaultSoundName
-        notification.userInfo = parrot.toUserInfo()
+        notification.userInfo = parrot.userInfo
         
         UIApplication.shared.scheduleLocalNotification(notification)
     }
