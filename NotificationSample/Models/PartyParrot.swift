@@ -105,5 +105,3 @@ enum ParrotGif: String {
         ]
     }
 }
-
-
