@@ -18,11 +18,11 @@ enum ParrotAction: String {
     func performWith(parrot: PartyParrot) {
         switch self {
         case .add:
-            ParrotAPIController.add(parrot: parrot)
+            ParrotAPIController.add(parrot)
         case .block:
-            ParrotAPIController.block(parrot: parrot)
+            ParrotAPIController.block(parrot)
         case .partyWith:
-            Party.current.add(parrot: parrot)
+            Party.current.add(parrot)
         }
     }
     

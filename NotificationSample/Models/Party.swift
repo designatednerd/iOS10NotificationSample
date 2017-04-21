@@ -14,19 +14,25 @@ struct Party {
     
     var parrots = [PartyParrot]()
     
-    mutating func add(parrot parrotToAdd: PartyParrot) {
-        self.parrots.append(parrotToAdd)
+    private func postUpdateNotification() {
+        NotificationCenter
+            .default
+            .post(name: .PartyUpdated,
+                  object: nil)
     }
     
-    mutating func block(parrot parrotToBlock: PartyParrot) {
-        self.parrots = self.parrots.filter() {
-                            parrot in
-                            guard (parrot.name != parrotToBlock.name
-                                && parrot.gif != parrotToBlock.gif) else {
-                                return false
-                            }
-                        
-                            return true
-                        }
+    mutating func add(_ parrotToAdd: PartyParrot) {
+        self.parrots.append(parrotToAdd)
+        self.postUpdateNotification()
     }
+    
+    mutating func block(_ parrotToBlock: PartyParrot) {
+        self.parrots = self.parrots.filter { $0 != parrotToBlock }
+        self.postUpdateNotification()
+    }
+}
+
+extension Notification.Name {
+    
+    static let PartyUpdated = Notification.Name(rawValue: "PartyUpdated")
 }

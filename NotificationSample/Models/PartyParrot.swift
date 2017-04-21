@@ -61,6 +61,15 @@ struct PartyParrot {
     }
 }
 
+extension PartyParrot: Equatable {
+
+    static func ==(lhs: PartyParrot, rhs: PartyParrot) -> Bool {
+        return lhs.name == rhs.name
+            && lhs.gif == rhs.gif
+        
+    }
+}
+
 enum ParrotGif: String {
     case
     aussieparrot,

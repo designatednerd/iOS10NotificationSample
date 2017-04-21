@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,34 +22,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RVn-uf-WXW">
+                                <rect key="frame" x="20" y="172.5" width="335" height="322.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has the user been asked about notification permissions? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifJ-e9-C6w" userLabel="Has the user been asked about push notifications?">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¯\_(ツ)_/¯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPv-n3-JX8">
+                                        <rect key="frame" x="61.5" y="49" width="212" height="60"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has the user enabled notifications?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsw-X8-S6n">
+                                        <rect key="frame" x="33" y="117" width="269" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¯\_(ツ)_/¯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpU-s4-nOc">
+                                        <rect key="frame" x="61.5" y="145.5" width="212" height="60"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="kNZ-tc-cRD">
+                                        <rect key="frame" x="150" y="213.5" width="35" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="6fc-YM-gj6"/>
                                             <constraint firstAttribute="height" constant="25" id="UIg-dN-LGL"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wa7-bi-uz7">
+                                        <rect key="frame" x="0.0" y="246.5" width="335" height="34"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Ask For Notification Permission">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,6 +66,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2Z-Vv-53F">
+                                        <rect key="frame" x="0.0" y="288.5" width="335" height="34"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Send A Test Notification">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,30 +77,75 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ifJ-e9-C6w" secondAttribute="trailing" id="FI6-xa-J8T"/>
                                     <constraint firstItem="Wa7-bi-uz7" firstAttribute="leading" secondItem="RVn-uf-WXW" secondAttribute="leading" id="Ppz-yC-G8U"/>
                                     <constraint firstAttribute="trailing" secondItem="I2Z-Vv-53F" secondAttribute="trailing" id="StG-cP-9uV"/>
+                                    <constraint firstItem="ifJ-e9-C6w" firstAttribute="leading" secondItem="RVn-uf-WXW" secondAttribute="leading" id="hcE-MY-znw"/>
                                     <constraint firstAttribute="trailing" secondItem="Wa7-bi-uz7" secondAttribute="trailing" id="kmC-50-qaE"/>
                                     <constraint firstItem="I2Z-Vv-53F" firstAttribute="leading" secondItem="RVn-uf-WXW" secondAttribute="leading" id="mEs-aF-bNJ"/>
                                 </constraints>
                             </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4zA-QC-hia">
+                                <rect key="frame" x="10" y="539" width="355" height="118"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="l6l-IJ-exM">
+                                    <size key="itemSize" width="35" height="25"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ParrotCell" id="hlo-P8-Vd8" customClass="ParrotCollectionViewCell" customModule="NotificationSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="35" height="25"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ShZ-KJ-CvN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="35" height="25"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ShZ-KJ-CvN" firstAttribute="top" secondItem="hlo-P8-Vd8" secondAttribute="top" id="6eQ-c7-clm"/>
+                                            <constraint firstAttribute="bottom" secondItem="ShZ-KJ-CvN" secondAttribute="bottom" id="fUm-Ih-noL"/>
+                                            <constraint firstItem="ShZ-KJ-CvN" firstAttribute="leading" secondItem="hlo-P8-Vd8" secondAttribute="leading" id="fXx-Gw-TZK"/>
+                                            <constraint firstAttribute="trailing" secondItem="ShZ-KJ-CvN" secondAttribute="trailing" id="y89-bn-df9"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="ShZ-KJ-CvN" id="Imv-Mf-XJM"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="u18-AG-Ub9" id="73z-Rf-sHT"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RVn-uf-WXW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8D7-ud-pRR"/>
+                            <constraint firstAttribute="trailing" secondItem="4zA-QC-hia" secondAttribute="trailing" constant="10" id="9p5-ag-h6m"/>
                             <constraint firstItem="RVn-uf-WXW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="AXN-RX-gjc"/>
                             <constraint firstItem="RVn-uf-WXW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DLs-Ma-FU1"/>
+                            <constraint firstItem="4zA-QC-hia" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="I9Q-kn-hmb"/>
+                            <constraint firstItem="4zA-QC-hia" firstAttribute="top" secondItem="RVn-uf-WXW" secondAttribute="bottom" constant="44" id="dAw-me-AYG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4zA-QC-hia" secondAttribute="bottom" constant="10" id="gTX-jj-lC8"/>
                             <constraint firstAttribute="trailing" secondItem="RVn-uf-WXW" secondAttribute="trailing" constant="20" id="x91-IW-qMe"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="askButton" destination="Wa7-bi-uz7" id="hAR-1C-LUs"/>
                         <outlet property="askedLabel" destination="mPv-n3-JX8" id="xVF-al-fiT"/>
+                        <outlet property="collectionView" destination="4zA-QC-hia" id="2sb-EU-utr"/>
                         <outlet property="grantedLabel" destination="jpU-s4-nOc" id="Aze-Gk-3pG"/>
                         <outlet property="parrotImageView" destination="kNZ-tc-cRD" id="iji-cF-GOa"/>
                         <outlet property="sendTestNotificationButton" destination="I2Z-Vv-53F" id="aOE-tj-rC1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="u18-AG-Ub9" customClass="ParrotCollectionViewDataSource" customModule="NotificationSample" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
@@ -106,34 +162,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9fq-Wr-PKC">
+                                <rect key="frame" x="20" y="211" width="335" height="245"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8Q-mf-gDQ">
+                                        <rect key="frame" x="45" y="0.0" width="245" height="25"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="cKD-Iq-Czr"/>
-                                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="uQH-2O-O1d"/>
-                                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="2IS-8N-6Tn"/>
-                                            <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="t5s-d2-xnZ"/>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="PYZ-VU-aSn"/>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="OOl-Em-qf9"/>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="tF9-mt-B13"/>
+                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="cKD-Iq-Czr">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="25"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="uQH-2O-O1d">
+                                                <rect key="frame" x="35" y="0.0" width="35" height="25"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="2IS-8N-6Tn">
+                                                <rect key="frame" x="70" y="0.0" width="35" height="25"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="t5s-d2-xnZ">
+                                                <rect key="frame" x="105" y="0.0" width="35" height="25"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="PYZ-VU-aSn">
+                                                <rect key="frame" x="140" y="0.0" width="35" height="25"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="OOl-Em-qf9">
+                                                <rect key="frame" x="175" y="0.0" width="35" height="25"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="tF9-mt-B13">
+                                                <rect key="frame" x="210" y="0.0" width="35" height="25"/>
+                                            </imageView>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pretty Please?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TXg-7n-l50">
+                                        <rect key="frame" x="0.0" y="33" width="335" height="47"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You should give us notification permissions, we only get one chance when we show the system dialog." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MS-E9-X2g">
+                                        <rect key="frame" x="0.0" y="88" width="335" height="61"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(seriously, we won't spam you)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ed-ZV-Hjp">
+                                        <rect key="frame" x="93.5" y="157" width="148" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCU-2C-OKa">
+                                        <rect key="frame" x="0.0" y="177" width="335" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.63053245708154504" blue="0.027050442828838093" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Sure!">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -143,6 +219,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dff-yT-7i4">
+                                        <rect key="frame" x="0.0" y="215" width="335" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Hell No, I don't believe you!">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -155,9 +232,11 @@
                                 <constraints>
                                     <constraint firstItem="TXg-7n-l50" firstAttribute="leading" secondItem="9fq-Wr-PKC" secondAttribute="leading" id="2iA-7q-YgY"/>
                                     <constraint firstAttribute="trailing" secondItem="dff-yT-7i4" secondAttribute="trailing" id="D8Z-Mo-O4V"/>
+                                    <constraint firstAttribute="bottom" secondItem="7MS-E9-X2g" secondAttribute="bottom" constant="96" id="EMe-K7-4B6"/>
                                     <constraint firstAttribute="trailing" secondItem="TXg-7n-l50" secondAttribute="trailing" id="KfE-c3-3Na"/>
                                     <constraint firstAttribute="trailing" secondItem="MCU-2C-OKa" secondAttribute="trailing" id="Zfs-kx-bhw"/>
                                     <constraint firstItem="MCU-2C-OKa" firstAttribute="leading" secondItem="9fq-Wr-PKC" secondAttribute="leading" id="fGh-Xv-xU1"/>
+                                    <constraint firstItem="7MS-E9-X2g" firstAttribute="top" secondItem="9fq-Wr-PKC" secondAttribute="top" constant="88" id="kYa-l9-bn2"/>
                                     <constraint firstItem="dff-yT-7i4" firstAttribute="leading" secondItem="9fq-Wr-PKC" secondAttribute="leading" id="lba-rp-VAT"/>
                                 </constraints>
                             </stackView>

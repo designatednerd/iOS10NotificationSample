@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet private var askButton: UIButton!
     @IBOutlet private var grantedLabel: UILabel!
     @IBOutlet private var sendTestNotificationButton: UIButton!
+    @IBOutlet private var collectionView: UICollectionView!
     
     var notificationHandler: VersionSpecificNotificationHandler!
     
@@ -27,10 +28,27 @@ class ViewController: UIViewController {
     
     //MARK: View Lifecycle
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // That other kind of notification
+        NotificationCenter
+            .default
+            .addObserver(forName: .PartyUpdated,
+                         object: nil,
+                         queue: .main,
+                         using: {
+                            [weak self]
+                            _ in
+                            self?.collectionView.reloadData()
+                         })
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.parrotImageView.image = ParrotGif.partyparrot.animated
+        self.parrotImageView.isHidden = true
         
         guard let notificationHandler = self.notificationHandler else {
             assertionFailure("You're gonna want a notification handler to actually load this stuff")
@@ -110,6 +128,6 @@ class ViewController: UIViewController {
         let parrot = self.parrots[randomIndex]
         
         self.notificationHandler.scheduleNotification(for: parrot,
-                                                      delay: 5)        
+                                                      delay: 3)
     }
 }

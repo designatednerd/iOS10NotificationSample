@@ -44,7 +44,7 @@ extension iOS10NotificationHandler: UNUserNotificationCenterDelegate {
                                 withCompletionHandler completionHandler: @escaping () -> Swift.Void) {
         
         let userInfo = response.notification.request.content.userInfo
-        
+
         self.handleActionWithIdentifier(identifier: response.actionIdentifier,
                                         for: userInfo,
                                         completionHandler: completionHandler)
@@ -127,6 +127,7 @@ extension iOS10NotificationHandler: VersionSpecificNotificationHandler {
         content.subtitle = "What would you like to do?"
         content.body = "You can either add \(parrot.name) as a friend, block \(parrot.name), or add \(parrot.name) to your party."
         content.attachments = [attachment]
+        content.userInfo = parrot.userInfo
         
         
         //Note: For a remote notification to invoke your Notification Content extension, you'd need to add this same category identifier as the value for the category key in the payload dictionary.

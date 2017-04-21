@@ -19,11 +19,13 @@ struct ParrotAPIController {
         completion()
     }
     
-    static func add(parrot: PartyParrot) {
+    static func add(_ parrot: PartyParrot) {
         //Add parrot as friend
+        Party.current.add(parrot)
     }
     
-    static func block(parrot: PartyParrot) {
+    static func block(_ parrot: PartyParrot) {
         //block parrot.
+        Party.current.block(parrot)
     }
 }
