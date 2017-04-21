@@ -56,7 +56,6 @@
 		33DC4BA21D78754500E0DB7F /* shuffleparrot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33DC4B821D78754500E0DB7F /* shuffleparrot.gif */; };
 		33DC4BA31D78754500E0DB7F /* shufflepartyparrot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33DC4B831D78754500E0DB7F /* shufflepartyparrot.gif */; };
 		33DC4BA41D78754500E0DB7F /* slowparrot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33DC4B841D78754500E0DB7F /* slowparrot.gif */; };
-		33FED1981EA9C0CA0058DB0F /* ParrotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1971EA9C0CA0058DB0F /* ParrotCollectionViewCell.swift */; };
 		33FED1C61EAA62470058DB0F /* ParrotKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 33FED1C41EAA62470058DB0F /* ParrotKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33FED1C91EAA62470058DB0F /* ParrotKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FED1C21EAA62470058DB0F /* ParrotKit.framework */; };
 		33FED1CA1EAA62470058DB0F /* ParrotKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33FED1C21EAA62470058DB0F /* ParrotKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -67,6 +66,7 @@
 		33FED1D81EAA625E0058DB0F /* PartyParrot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1D31EAA625E0058DB0F /* PartyParrot.swift */; };
 		33FED1DB1EAA62740058DB0F /* UIImage+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1DA1EAA62740058DB0F /* UIImage+GIF.swift */; };
 		33FED1DE1EAA628B0058DB0F /* ParrotAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1DD1EAA628B0058DB0F /* ParrotAPIController.swift */; };
+		33FED1E11EAA63F10058DB0F /* ParrotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1E01EAA63F10058DB0F /* ParrotCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,7 +173,6 @@
 		33DC4B821D78754500E0DB7F /* shuffleparrot.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = shuffleparrot.gif; sourceTree = "<group>"; };
 		33DC4B831D78754500E0DB7F /* shufflepartyparrot.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = shufflepartyparrot.gif; sourceTree = "<group>"; };
 		33DC4B841D78754500E0DB7F /* slowparrot.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = slowparrot.gif; sourceTree = "<group>"; };
-		33FED1971EA9C0CA0058DB0F /* ParrotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotCollectionViewCell.swift; sourceTree = "<group>"; };
 		33FED1C21EAA62470058DB0F /* ParrotKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ParrotKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FED1C41EAA62470058DB0F /* ParrotKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParrotKit.h; sourceTree = "<group>"; };
 		33FED1C51EAA62470058DB0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -184,6 +183,7 @@
 		33FED1D31EAA625E0058DB0F /* PartyParrot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyParrot.swift; sourceTree = "<group>"; };
 		33FED1DA1EAA62740058DB0F /* UIImage+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+GIF.swift"; sourceTree = "<group>"; };
 		33FED1DD1EAA628B0058DB0F /* ParrotAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotAPIController.swift; sourceTree = "<group>"; };
+		33FED1E01EAA63F10058DB0F /* ParrotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,7 +261,6 @@
 				336C7AF71D6167AC0037150A /* AppDelegate.swift */,
 				3314C5011D77DFED00F5549E /* NotificationHandling */,
 				33DC4B5F1D7864F800E0DB7F /* ViewControllers */,
-				33FED1961EA9C0BB0058DB0F /* Views */,
 				336C7AFB1D6167AC0037150A /* Main.storyboard */,
 				33DC4B641D78754500E0DB7F /* parrots */,
 				336C7AFE1D6167AC0037150A /* Assets.xcassets */,
@@ -347,21 +346,14 @@
 			path = parrots;
 			sourceTree = "<group>";
 		};
-		33FED1961EA9C0BB0058DB0F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				33FED1971EA9C0CA0058DB0F /* ParrotCollectionViewCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		33FED1C31EAA62470058DB0F /* ParrotKit */ = {
 			isa = PBXGroup;
 			children = (
 				33FED1C41EAA62470058DB0F /* ParrotKit.h */,
-				33FED1CE1EAA625E0058DB0F /* Models */,
 				33FED1D91EAA62740058DB0F /* Extensions */,
+				33FED1CE1EAA625E0058DB0F /* Models */,
 				33FED1DC1EAA628B0058DB0F /* Networking */,
+				33FED1DF1EAA63F10058DB0F /* Views */,
 				33FED1C51EAA62470058DB0F /* Info.plist */,
 			);
 			path = ParrotKit;
@@ -393,6 +385,14 @@
 				33FED1DD1EAA628B0058DB0F /* ParrotAPIController.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		33FED1DF1EAA63F10058DB0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33FED1E01EAA63F10058DB0F /* ParrotCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -610,7 +610,6 @@
 			files = (
 				3314C50C1D785B1B00F5549E /* ParrotAction.swift in Sources */,
 				3314C5051D77DFED00F5549E /* iOS10NotificationHandler.swift in Sources */,
-				33FED1981EA9C0CA0058DB0F /* ParrotCollectionViewCell.swift in Sources */,
 				33DC4B631D78650600E0DB7F /* NotificationPromptViewController.swift in Sources */,
 				33DC4B611D7864F800E0DB7F /* ViewController.swift in Sources */,
 				3314C5071D77DFED00F5549E /* VersionSpecificNotificationHandler.swift in Sources */,
@@ -639,6 +638,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33FED1E11EAA63F10058DB0F /* ParrotCollectionViewCell.swift in Sources */,
 				33FED1D81EAA625E0058DB0F /* PartyParrot.swift in Sources */,
 				33FED1D51EAA625E0058DB0F /* GreatestCommonDenominator.swift in Sources */,
 				33FED1D41EAA625E0058DB0F /* Friends.swift in Sources */,
