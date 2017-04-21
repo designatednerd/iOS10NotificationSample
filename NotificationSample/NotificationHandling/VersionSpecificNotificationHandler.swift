@@ -12,11 +12,6 @@ import UIKit
 
 //MARK: Protocol declaration
 
-enum NotificationCategory: String {
-    case
-    partyRequest = "com.example.notificaton.partyrequest"
-}
-
 protocol VersionSpecificNotificationHandler {
     
     func handleActionWithIdentifier(identifier: String?,

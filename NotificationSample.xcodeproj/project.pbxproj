@@ -10,7 +10,6 @@
 		3314C5051D77DFED00F5549E /* iOS10NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314C5021D77DFED00F5549E /* iOS10NotificationHandler.swift */; };
 		3314C5061D77DFED00F5549E /* iOS9AndBelowNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314C5031D77DFED00F5549E /* iOS9AndBelowNotificationHandler.swift */; };
 		3314C5071D77DFED00F5549E /* VersionSpecificNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314C5041D77DFED00F5549E /* VersionSpecificNotificationHandler.swift */; };
-		3314C50C1D785B1B00F5549E /* ParrotAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314C50B1D785B1B00F5549E /* ParrotAction.swift */; };
 		336C7AF81D6167AC0037150A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336C7AF71D6167AC0037150A /* AppDelegate.swift */; };
 		336C7AFD1D6167AC0037150A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 336C7AFB1D6167AC0037150A /* Main.storyboard */; };
 		336C7AFF1D6167AC0037150A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 336C7AFE1D6167AC0037150A /* Assets.xcassets */; };
@@ -67,6 +66,8 @@
 		33FED1DB1EAA62740058DB0F /* UIImage+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1DA1EAA62740058DB0F /* UIImage+GIF.swift */; };
 		33FED1DE1EAA628B0058DB0F /* ParrotAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1DD1EAA628B0058DB0F /* ParrotAPIController.swift */; };
 		33FED1E11EAA63F10058DB0F /* ParrotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1E01EAA63F10058DB0F /* ParrotCollectionViewCell.swift */; };
+		33FED1E31EAA661B0058DB0F /* ParrotAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1E21EAA661B0058DB0F /* ParrotAction.swift */; };
+		33FED1E51EAA66950058DB0F /* NotificationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1E41EAA66950058DB0F /* NotificationCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +124,6 @@
 		3314C5021D77DFED00F5549E /* iOS10NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOS10NotificationHandler.swift; sourceTree = "<group>"; };
 		3314C5031D77DFED00F5549E /* iOS9AndBelowNotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOS9AndBelowNotificationHandler.swift; sourceTree = "<group>"; };
 		3314C5041D77DFED00F5549E /* VersionSpecificNotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionSpecificNotificationHandler.swift; sourceTree = "<group>"; };
-		3314C50B1D785B1B00F5549E /* ParrotAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotAction.swift; sourceTree = "<group>"; };
 		336C7AF41D6167AC0037150A /* NotificationSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotificationSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		336C7AF71D6167AC0037150A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		336C7AFC1D6167AC0037150A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -184,6 +184,8 @@
 		33FED1DA1EAA62740058DB0F /* UIImage+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+GIF.swift"; sourceTree = "<group>"; };
 		33FED1DD1EAA628B0058DB0F /* ParrotAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotAPIController.swift; sourceTree = "<group>"; };
 		33FED1E01EAA63F10058DB0F /* ParrotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotCollectionViewCell.swift; sourceTree = "<group>"; };
+		33FED1E21EAA661B0058DB0F /* ParrotAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotAction.swift; sourceTree = "<group>"; };
+		33FED1E41EAA66950058DB0F /* NotificationCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,7 +229,6 @@
 				3314C5041D77DFED00F5549E /* VersionSpecificNotificationHandler.swift */,
 				3314C5031D77DFED00F5549E /* iOS9AndBelowNotificationHandler.swift */,
 				3314C5021D77DFED00F5549E /* iOS10NotificationHandler.swift */,
-				3314C50B1D785B1B00F5549E /* ParrotAction.swift */,
 			);
 			path = NotificationHandling;
 			sourceTree = "<group>";
@@ -363,6 +364,8 @@
 			isa = PBXGroup;
 			children = (
 				33FED1CF1EAA625E0058DB0F /* Friends.swift */,
+				33FED1E41EAA66950058DB0F /* NotificationCategory.swift */,
+				33FED1E21EAA661B0058DB0F /* ParrotAction.swift */,
 				33FED1D01EAA625E0058DB0F /* GreatestCommonDenominator.swift */,
 				33FED1D11EAA625E0058DB0F /* ParrotCollectionViewDataSource.swift */,
 				33FED1D21EAA625E0058DB0F /* Party.swift */,
@@ -608,7 +611,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3314C50C1D785B1B00F5549E /* ParrotAction.swift in Sources */,
 				3314C5051D77DFED00F5549E /* iOS10NotificationHandler.swift in Sources */,
 				33DC4B631D78650600E0DB7F /* NotificationPromptViewController.swift in Sources */,
 				33DC4B611D7864F800E0DB7F /* ViewController.swift in Sources */,
@@ -641,7 +643,9 @@
 				33FED1E11EAA63F10058DB0F /* ParrotCollectionViewCell.swift in Sources */,
 				33FED1D81EAA625E0058DB0F /* PartyParrot.swift in Sources */,
 				33FED1D51EAA625E0058DB0F /* GreatestCommonDenominator.swift in Sources */,
+				33FED1E31EAA661B0058DB0F /* ParrotAction.swift in Sources */,
 				33FED1D41EAA625E0058DB0F /* Friends.swift in Sources */,
+				33FED1E51EAA66950058DB0F /* NotificationCategory.swift in Sources */,
 				33FED1DE1EAA628B0058DB0F /* ParrotAPIController.swift in Sources */,
 				33FED1D71EAA625E0058DB0F /* Party.swift in Sources */,
 				33FED1DB1EAA62740058DB0F /* UIImage+GIF.swift in Sources */,

@@ -7,16 +7,15 @@
 //
 
 import Foundation
-import ParrotKit
 import UserNotifications
 
-enum ParrotAction: String {
+public enum ParrotAction: String {
     case
     block = "com.example.action.block",
     add = "com.example.action.add",
     partyWith = "com.example.action.partywith"
     
-    func performWith(parrot: PartyParrot) {
+    public func performWith(parrot: PartyParrot) {
         switch self {
         case .add:
             ParrotAPIController.add(parrot)
@@ -28,7 +27,7 @@ enum ParrotAction: String {
     }
     
     @available(iOS 10, *)
-    static func configureNotificationActions() {
+    public static func configureNotificationActions() {
         let blockAction = UNNotificationAction(identifier: ParrotAction.block.rawValue,
                                                title: "Block Parrot")
         
