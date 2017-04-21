@@ -48,12 +48,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partyparrot.gif" translatesAutoresizingMaskIntoConstraints="NO" id="kNZ-tc-cRD">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parrot" translatesAutoresizingMaskIntoConstraints="NO" id="kNZ-tc-cRD">
                                         <rect key="frame" x="150" y="213.5" width="35" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="35" id="6fc-YM-gj6"/>
-                                            <constraint firstAttribute="height" constant="25" id="UIg-dN-LGL"/>
-                                        </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wa7-bi-uz7">
                                         <rect key="frame" x="0.0" y="246.5" width="335" height="34"/>
@@ -241,6 +237,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="parrot" width="35" height="25"/>
         <image name="partyparrot.gif" width="35" height="25"/>
     </resources>
 </document>
