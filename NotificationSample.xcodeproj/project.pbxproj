@@ -10,9 +10,7 @@
 		3314C5051D77DFED00F5549E /* iOS10NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314C5021D77DFED00F5549E /* iOS10NotificationHandler.swift */; };
 		3314C5061D77DFED00F5549E /* iOS9AndBelowNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314C5031D77DFED00F5549E /* iOS9AndBelowNotificationHandler.swift */; };
 		3314C5071D77DFED00F5549E /* VersionSpecificNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314C5041D77DFED00F5549E /* VersionSpecificNotificationHandler.swift */; };
-		3314C50A1D7859F000F5549E /* ParrotAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314C5091D7859F000F5549E /* ParrotAPIController.swift */; };
 		3314C50C1D785B1B00F5549E /* ParrotAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314C50B1D785B1B00F5549E /* ParrotAction.swift */; };
-		3314C50F1D785B7700F5549E /* PartyParrot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314C50E1D785B7700F5549E /* PartyParrot.swift */; };
 		336C7AF81D6167AC0037150A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336C7AF71D6167AC0037150A /* AppDelegate.swift */; };
 		336C7AFD1D6167AC0037150A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 336C7AFB1D6167AC0037150A /* Main.storyboard */; };
 		336C7AFF1D6167AC0037150A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 336C7AFE1D6167AC0037150A /* Assets.xcassets */; };
@@ -24,7 +22,6 @@
 		336C7B1C1D61680D0037150A /* NotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 336C7B0D1D61680D0037150A /* NotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		336C7B281D6168330037150A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336C7B271D6168330037150A /* NotificationService.swift */; };
 		336C7B2C1D6168330037150A /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 336C7B251D6168330037150A /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		33DC4B5E1D7862F900E0DB7F /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC4B5D1D7862F900E0DB7F /* Party.swift */; };
 		33DC4B611D7864F800E0DB7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC4B601D7864F800E0DB7F /* ViewController.swift */; };
 		33DC4B631D78650600E0DB7F /* NotificationPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC4B621D78650600E0DB7F /* NotificationPromptViewController.swift */; };
 		33DC4B851D78754500E0DB7F /* aussiecongaparrot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33DC4B651D78754500E0DB7F /* aussiecongaparrot.gif */; };
@@ -59,11 +56,17 @@
 		33DC4BA21D78754500E0DB7F /* shuffleparrot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33DC4B821D78754500E0DB7F /* shuffleparrot.gif */; };
 		33DC4BA31D78754500E0DB7F /* shufflepartyparrot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33DC4B831D78754500E0DB7F /* shufflepartyparrot.gif */; };
 		33DC4BA41D78754500E0DB7F /* slowparrot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33DC4B841D78754500E0DB7F /* slowparrot.gif */; };
-		33DC4BA71D7875A100E0DB7F /* UIImage+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC4BA61D7875A100E0DB7F /* UIImage+GIF.swift */; };
-		33DC4BA91D78792800E0DB7F /* GreatestCommonDenominator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC4BA81D78792800E0DB7F /* GreatestCommonDenominator.swift */; };
 		33FED1981EA9C0CA0058DB0F /* ParrotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1971EA9C0CA0058DB0F /* ParrotCollectionViewCell.swift */; };
-		33FED19A1EA9C1E60058DB0F /* ParrotCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1991EA9C1E60058DB0F /* ParrotCollectionViewDataSource.swift */; };
-		33FED1BC1EAA61760058DB0F /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1BB1EAA61760058DB0F /* Friends.swift */; };
+		33FED1C61EAA62470058DB0F /* ParrotKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 33FED1C41EAA62470058DB0F /* ParrotKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33FED1C91EAA62470058DB0F /* ParrotKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FED1C21EAA62470058DB0F /* ParrotKit.framework */; };
+		33FED1CA1EAA62470058DB0F /* ParrotKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33FED1C21EAA62470058DB0F /* ParrotKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33FED1D41EAA625E0058DB0F /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1CF1EAA625E0058DB0F /* Friends.swift */; };
+		33FED1D51EAA625E0058DB0F /* GreatestCommonDenominator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1D01EAA625E0058DB0F /* GreatestCommonDenominator.swift */; };
+		33FED1D61EAA625E0058DB0F /* ParrotCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1D11EAA625E0058DB0F /* ParrotCollectionViewDataSource.swift */; };
+		33FED1D71EAA625E0058DB0F /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1D21EAA625E0058DB0F /* Party.swift */; };
+		33FED1D81EAA625E0058DB0F /* PartyParrot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1D31EAA625E0058DB0F /* PartyParrot.swift */; };
+		33FED1DB1EAA62740058DB0F /* UIImage+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1DA1EAA62740058DB0F /* UIImage+GIF.swift */; };
+		33FED1DE1EAA628B0058DB0F /* ParrotAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1DD1EAA628B0058DB0F /* ParrotAPIController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 336C7B241D6168330037150A;
 			remoteInfo = NotificationService;
+		};
+		33FED1C71EAA62470058DB0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 336C7AEC1D6167AC0037150A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33FED1C11EAA62470058DB0F;
+			remoteInfo = ParrotKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -102,6 +112,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				33FED1CA1EAA62470058DB0F /* ParrotKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,9 +123,7 @@
 		3314C5021D77DFED00F5549E /* iOS10NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOS10NotificationHandler.swift; sourceTree = "<group>"; };
 		3314C5031D77DFED00F5549E /* iOS9AndBelowNotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOS9AndBelowNotificationHandler.swift; sourceTree = "<group>"; };
 		3314C5041D77DFED00F5549E /* VersionSpecificNotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionSpecificNotificationHandler.swift; sourceTree = "<group>"; };
-		3314C5091D7859F000F5549E /* ParrotAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotAPIController.swift; sourceTree = "<group>"; };
 		3314C50B1D785B1B00F5549E /* ParrotAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotAction.swift; sourceTree = "<group>"; };
-		3314C50E1D785B7700F5549E /* PartyParrot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyParrot.swift; sourceTree = "<group>"; };
 		336C7AF41D6167AC0037150A /* NotificationSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotificationSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		336C7AF71D6167AC0037150A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		336C7AFC1D6167AC0037150A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,7 +139,6 @@
 		336C7B251D6168330037150A /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		336C7B271D6168330037150A /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		336C7B291D6168330037150A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33DC4B5D1D7862F900E0DB7F /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		33DC4B601D7864F800E0DB7F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33DC4B621D78650600E0DB7F /* NotificationPromptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationPromptViewController.swift; sourceTree = "<group>"; };
 		33DC4B651D78754500E0DB7F /* aussiecongaparrot.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = aussiecongaparrot.gif; sourceTree = "<group>"; };
@@ -165,11 +173,17 @@
 		33DC4B821D78754500E0DB7F /* shuffleparrot.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = shuffleparrot.gif; sourceTree = "<group>"; };
 		33DC4B831D78754500E0DB7F /* shufflepartyparrot.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = shufflepartyparrot.gif; sourceTree = "<group>"; };
 		33DC4B841D78754500E0DB7F /* slowparrot.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = slowparrot.gif; sourceTree = "<group>"; };
-		33DC4BA61D7875A100E0DB7F /* UIImage+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+GIF.swift"; sourceTree = "<group>"; };
-		33DC4BA81D78792800E0DB7F /* GreatestCommonDenominator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreatestCommonDenominator.swift; sourceTree = "<group>"; };
 		33FED1971EA9C0CA0058DB0F /* ParrotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotCollectionViewCell.swift; sourceTree = "<group>"; };
-		33FED1991EA9C1E60058DB0F /* ParrotCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotCollectionViewDataSource.swift; sourceTree = "<group>"; };
-		33FED1BB1EAA61760058DB0F /* Friends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		33FED1C21EAA62470058DB0F /* ParrotKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ParrotKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33FED1C41EAA62470058DB0F /* ParrotKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParrotKit.h; sourceTree = "<group>"; };
+		33FED1C51EAA62470058DB0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33FED1CF1EAA625E0058DB0F /* Friends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		33FED1D01EAA625E0058DB0F /* GreatestCommonDenominator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreatestCommonDenominator.swift; sourceTree = "<group>"; };
+		33FED1D11EAA625E0058DB0F /* ParrotCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		33FED1D21EAA625E0058DB0F /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
+		33FED1D31EAA625E0058DB0F /* PartyParrot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyParrot.swift; sourceTree = "<group>"; };
+		33FED1DA1EAA62740058DB0F /* UIImage+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+GIF.swift"; sourceTree = "<group>"; };
+		33FED1DD1EAA628B0058DB0F /* ParrotAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotAPIController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33FED1C91EAA62470058DB0F /* ParrotKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +205,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		336C7B221D6168330037150A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33FED1BE1EAA62470058DB0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -210,32 +232,13 @@
 			path = NotificationHandling;
 			sourceTree = "<group>";
 		};
-		3314C5081D7859E500F5549E /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				3314C5091D7859F000F5549E /* ParrotAPIController.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		3314C50D1D785B6A00F5549E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				33FED1BB1EAA61760058DB0F /* Friends.swift */,
-				3314C50E1D785B7700F5549E /* PartyParrot.swift */,
-				33DC4B5D1D7862F900E0DB7F /* Party.swift */,
-				33DC4BA81D78792800E0DB7F /* GreatestCommonDenominator.swift */,
-				33FED1991EA9C1E60058DB0F /* ParrotCollectionViewDataSource.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		336C7AEB1D6167AC0037150A = {
 			isa = PBXGroup;
 			children = (
 				336C7AF61D6167AC0037150A /* NotificationSample */,
 				336C7B131D61680D0037150A /* NotificationContent */,
 				336C7B261D6168330037150A /* NotificationService */,
+				33FED1C31EAA62470058DB0F /* ParrotKit */,
 				336C7B0E1D61680D0037150A /* Frameworks */,
 				336C7AF51D6167AC0037150A /* Products */,
 			);
@@ -247,6 +250,7 @@
 				336C7AF41D6167AC0037150A /* NotificationSample.app */,
 				336C7B0D1D61680D0037150A /* NotificationContent.appex */,
 				336C7B251D6168330037150A /* NotificationService.appex */,
+				33FED1C21EAA62470058DB0F /* ParrotKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,9 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				336C7AF71D6167AC0037150A /* AppDelegate.swift */,
-				33DC4BA51D78759100E0DB7F /* Extensions */,
-				3314C50D1D785B6A00F5549E /* Models */,
-				3314C5081D7859E500F5549E /* Networking */,
 				3314C5011D77DFED00F5549E /* NotificationHandling */,
 				33DC4B5F1D7864F800E0DB7F /* ViewControllers */,
 				33FED1961EA9C0BB0058DB0F /* Views */,
@@ -346,14 +347,6 @@
 			path = parrots;
 			sourceTree = "<group>";
 		};
-		33DC4BA51D78759100E0DB7F /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				33DC4BA61D7875A100E0DB7F /* UIImage+GIF.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		33FED1961EA9C0BB0058DB0F /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,7 +355,58 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		33FED1C31EAA62470058DB0F /* ParrotKit */ = {
+			isa = PBXGroup;
+			children = (
+				33FED1C41EAA62470058DB0F /* ParrotKit.h */,
+				33FED1CE1EAA625E0058DB0F /* Models */,
+				33FED1D91EAA62740058DB0F /* Extensions */,
+				33FED1DC1EAA628B0058DB0F /* Networking */,
+				33FED1C51EAA62470058DB0F /* Info.plist */,
+			);
+			path = ParrotKit;
+			sourceTree = "<group>";
+		};
+		33FED1CE1EAA625E0058DB0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				33FED1CF1EAA625E0058DB0F /* Friends.swift */,
+				33FED1D01EAA625E0058DB0F /* GreatestCommonDenominator.swift */,
+				33FED1D11EAA625E0058DB0F /* ParrotCollectionViewDataSource.swift */,
+				33FED1D21EAA625E0058DB0F /* Party.swift */,
+				33FED1D31EAA625E0058DB0F /* PartyParrot.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		33FED1D91EAA62740058DB0F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				33FED1DA1EAA62740058DB0F /* UIImage+GIF.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		33FED1DC1EAA628B0058DB0F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				33FED1DD1EAA628B0058DB0F /* ParrotAPIController.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		33FED1BF1EAA62470058DB0F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33FED1C61EAA62470058DB0F /* ParrotKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		336C7AF31D6167AC0037150A /* NotificationSample */ = {
@@ -380,6 +424,7 @@
 			dependencies = (
 				336C7B1B1D61680D0037150A /* PBXTargetDependency */,
 				336C7B2B1D6168330037150A /* PBXTargetDependency */,
+				33FED1C81EAA62470058DB0F /* PBXTargetDependency */,
 			);
 			name = NotificationSample;
 			productName = NotificationSample;
@@ -420,6 +465,24 @@
 			productReference = 336C7B251D6168330037150A /* NotificationService.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		33FED1C11EAA62470058DB0F /* ParrotKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33FED1CB1EAA62470058DB0F /* Build configuration list for PBXNativeTarget "ParrotKit" */;
+			buildPhases = (
+				33FED1BD1EAA62470058DB0F /* Sources */,
+				33FED1BE1EAA62470058DB0F /* Frameworks */,
+				33FED1BF1EAA62470058DB0F /* Headers */,
+				33FED1C01EAA62470058DB0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParrotKit;
+			productName = ParrotKit;
+			productReference = 33FED1C21EAA62470058DB0F /* ParrotKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -445,6 +508,11 @@
 						DevelopmentTeam = 4U392EMNT3;
 						ProvisioningStyle = Automatic;
 					};
+					33FED1C11EAA62470058DB0F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4U392EMNT3;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 336C7AEF1D6167AC0037150A /* Build configuration list for PBXProject "NotificationSample" */;
@@ -463,6 +531,7 @@
 				336C7AF31D6167AC0037150A /* NotificationSample */,
 				336C7B0C1D61680D0037150A /* NotificationContent */,
 				336C7B241D6168330037150A /* NotificationService */,
+				33FED1C11EAA62470058DB0F /* ParrotKit */,
 			);
 		};
 /* End PBXProject section */
@@ -525,6 +594,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33FED1C01EAA62470058DB0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -533,19 +609,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3314C50C1D785B1B00F5549E /* ParrotAction.swift in Sources */,
-				3314C50A1D7859F000F5549E /* ParrotAPIController.swift in Sources */,
-				33DC4BA91D78792800E0DB7F /* GreatestCommonDenominator.swift in Sources */,
-				33DC4BA71D7875A100E0DB7F /* UIImage+GIF.swift in Sources */,
 				3314C5051D77DFED00F5549E /* iOS10NotificationHandler.swift in Sources */,
 				33FED1981EA9C0CA0058DB0F /* ParrotCollectionViewCell.swift in Sources */,
 				33DC4B631D78650600E0DB7F /* NotificationPromptViewController.swift in Sources */,
 				33DC4B611D7864F800E0DB7F /* ViewController.swift in Sources */,
-				33DC4B5E1D7862F900E0DB7F /* Party.swift in Sources */,
-				33FED19A1EA9C1E60058DB0F /* ParrotCollectionViewDataSource.swift in Sources */,
-				3314C50F1D785B7700F5549E /* PartyParrot.swift in Sources */,
 				3314C5071D77DFED00F5549E /* VersionSpecificNotificationHandler.swift in Sources */,
 				336C7AF81D6167AC0037150A /* AppDelegate.swift in Sources */,
-				33FED1BC1EAA61760058DB0F /* Friends.swift in Sources */,
 				3314C5061D77DFED00F5549E /* iOS9AndBelowNotificationHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,6 +635,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33FED1BD1EAA62470058DB0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33FED1D81EAA625E0058DB0F /* PartyParrot.swift in Sources */,
+				33FED1D51EAA625E0058DB0F /* GreatestCommonDenominator.swift in Sources */,
+				33FED1D41EAA625E0058DB0F /* Friends.swift in Sources */,
+				33FED1DE1EAA628B0058DB0F /* ParrotAPIController.swift in Sources */,
+				33FED1D71EAA625E0058DB0F /* Party.swift in Sources */,
+				33FED1DB1EAA62740058DB0F /* UIImage+GIF.swift in Sources */,
+				33FED1D61EAA625E0058DB0F /* ParrotCollectionViewDataSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -578,6 +661,11 @@
 			isa = PBXTargetDependency;
 			target = 336C7B241D6168330037150A /* NotificationService */;
 			targetProxy = 336C7B2A1D6168330037150A /* PBXContainerItemProxy */;
+		};
+		33FED1C81EAA62470058DB0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33FED1C11EAA62470058DB0F /* ParrotKit */;
+			targetProxy = 33FED1C71EAA62470058DB0F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -784,6 +872,54 @@
 			};
 			name = Release;
 		};
+		33FED1CC1EAA62470058DB0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4U392EMNT3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ParrotKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.designatednerd.ParrotKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		33FED1CD1EAA62470058DB0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4U392EMNT3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ParrotKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.designatednerd.ParrotKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -822,6 +958,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		33FED1CB1EAA62470058DB0F /* Build configuration list for PBXNativeTarget "ParrotKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33FED1CC1EAA62470058DB0F /* Debug */,
+				33FED1CD1EAA62470058DB0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
