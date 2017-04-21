@@ -40,9 +40,9 @@ enum ParrotAction: String {
         let category =
             UNNotificationCategory(identifier: NotificationCategory.partyRequest.rawValue,
                                    actions: [
-                                    blockAction,
-                                    addAction,
                                     partyWithAction,
+                                    addAction,
+                                    blockAction,
                                    ],
                                    intentIdentifiers: [])
         
