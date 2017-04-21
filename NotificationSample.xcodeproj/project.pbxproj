@@ -63,6 +63,7 @@
 		33DC4BA91D78792800E0DB7F /* GreatestCommonDenominator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC4BA81D78792800E0DB7F /* GreatestCommonDenominator.swift */; };
 		33FED1981EA9C0CA0058DB0F /* ParrotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1971EA9C0CA0058DB0F /* ParrotCollectionViewCell.swift */; };
 		33FED19A1EA9C1E60058DB0F /* ParrotCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1991EA9C1E60058DB0F /* ParrotCollectionViewDataSource.swift */; };
+		33FED1BC1EAA61760058DB0F /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FED1BB1EAA61760058DB0F /* Friends.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +169,7 @@
 		33DC4BA81D78792800E0DB7F /* GreatestCommonDenominator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreatestCommonDenominator.swift; sourceTree = "<group>"; };
 		33FED1971EA9C0CA0058DB0F /* ParrotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotCollectionViewCell.swift; sourceTree = "<group>"; };
 		33FED1991EA9C1E60058DB0F /* ParrotCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		33FED1BB1EAA61760058DB0F /* Friends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 		3314C50D1D785B6A00F5549E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				33FED1BB1EAA61760058DB0F /* Friends.swift */,
 				3314C50E1D785B7700F5549E /* PartyParrot.swift */,
 				33DC4B5D1D7862F900E0DB7F /* Party.swift */,
 				33DC4BA81D78792800E0DB7F /* GreatestCommonDenominator.swift */,
@@ -542,6 +545,7 @@
 				3314C50F1D785B7700F5549E /* PartyParrot.swift in Sources */,
 				3314C5071D77DFED00F5549E /* VersionSpecificNotificationHandler.swift in Sources */,
 				336C7AF81D6167AC0037150A /* AppDelegate.swift in Sources */,
+				33FED1BC1EAA61760058DB0F /* Friends.swift in Sources */,
 				3314C5061D77DFED00F5549E /* iOS9AndBelowNotificationHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

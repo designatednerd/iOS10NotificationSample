@@ -145,7 +145,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="u18-AG-Ub9" customClass="ParrotCollectionViewDataSource" customModule="NotificationSample" customModuleProvider="target"/>
+                <customObject id="u18-AG-Ub9" customClass="PartyCollectionViewDataSource" customModule="NotificationSample" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
