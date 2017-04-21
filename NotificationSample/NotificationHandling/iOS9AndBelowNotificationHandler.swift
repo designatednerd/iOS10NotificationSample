@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ParrotKit
 import UIKit
 
 //Silence warnings from the compiler about classes which are deprecated in iOS 10

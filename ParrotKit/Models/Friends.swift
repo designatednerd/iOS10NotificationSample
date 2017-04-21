@@ -8,12 +8,28 @@
 
 import Foundation
 
-struct Friends {
+public struct Friends {
 
-    static let mine = Friends()
+    public static var mine = Friends()
+    private init() { }
     
-    var parrots = [PartyParrot]()
+    public var parrots = [PartyParrot]()
+    
+    private func postUpdateNotification() {
+        NotificationCenter
+            .default
+            .post(name: .PartyUpdated,
+                  object: nil)
+    }
 
+    public mutating func add(_ parrotToAdd: PartyParrot) {
+        self.parrots.append(parrotToAdd)
+        self.postUpdateNotification()
+    }
     
+    public mutating func block(_ parrotToBlock: PartyParrot) {
+        self.parrots = self.parrots.filter { $0 != parrotToBlock }
+        self.postUpdateNotification()
+    }
     
 }

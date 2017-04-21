@@ -8,11 +8,12 @@
 
 import Foundation
 
-struct Party {
+public struct Party {
     
-    static var current = Party()
+    public static var current = Party()
+    private init() { }
     
-    var parrots = [PartyParrot]()
+    public var parrots = [PartyParrot]()
     
     private func postUpdateNotification() {
         NotificationCenter
@@ -21,18 +22,18 @@ struct Party {
                   object: nil)
     }
     
-    mutating func add(_ parrotToAdd: PartyParrot) {
+    public mutating func add(_ parrotToAdd: PartyParrot) {
         self.parrots.append(parrotToAdd)
         self.postUpdateNotification()
     }
     
-    mutating func block(_ parrotToBlock: PartyParrot) {
+    public mutating func block(_ parrotToBlock: PartyParrot) {
         self.parrots = self.parrots.filter { $0 != parrotToBlock }
         self.postUpdateNotification()
     }
 }
 
-extension Notification.Name {
+public extension Notification.Name {
     
-    static let PartyUpdated = Notification.Name(rawValue: "PartyUpdated")
+    public static let PartyUpdated = Notification.Name(rawValue: "PartyUpdated")
 }

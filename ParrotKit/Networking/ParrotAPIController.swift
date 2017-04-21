@@ -8,24 +8,25 @@
 
 import Foundation
 
-struct ParrotAPIController {
+public struct ParrotAPIController {
 
-    static func sendDeviceTokenToOurServer(token: Data) {
+    public static func sendDeviceTokenToOurServer(token: Data) {
         //Hey, this is an example. It doesn't actually have to do anything!    
     }
     
-    static func getInfo(for parrot: PartyParrot, completion: (Void) -> (Void)) {
+    public static func getInfo(for parrot: PartyParrot, completion: (Void) -> (Void)) {
         //Pretend we got some information and updated the parrot. 
         completion()
     }
     
-    static func add(_ parrot: PartyParrot) {
+    public static func add(_ parrot: PartyParrot) {
         //Add parrot as friend
-        Party.current.add(parrot)
+        Friends.mine.add(parrot)
     }
     
-    static func block(_ parrot: PartyParrot) {
+    public static func block(_ parrot: PartyParrot) {
         //block parrot.
+        Friends.mine.block(parrot)
         Party.current.block(parrot)
     }
 }

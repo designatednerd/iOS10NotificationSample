@@ -9,22 +9,22 @@
 import Foundation
 import UIKit
 
-struct PartyParrot {
-    let name: String
-    let gif: ParrotGif
+public struct PartyParrot {
+    public let name: String
+    public let gif: ParrotGif
     
-    enum ParrotJSONKey: String {
+    private enum ParrotJSONKey: String {
         case
         name,
         image_name
     }
     
-    init(name: String, gif: ParrotGif) {
+    private init(name: String, gif: ParrotGif) {
         self.name = name
         self.gif = gif
     }
     
-    init?(userInfo: [AnyHashable : Any]) {
+    public init?(userInfo: [AnyHashable : Any]) {
         guard
             let name = userInfo[ParrotJSONKey.name.rawValue] as? String,
             let imageName = userInfo[ParrotJSONKey.image_name.rawValue] as? String,
@@ -35,7 +35,7 @@ struct PartyParrot {
         self.init(name: name, gif: gif)
     }
     
-    var userInfo: [String: String] {
+    public var userInfo: [String: String] {
         var userInfo = [String : String]()
         
         userInfo[ParrotJSONKey.name.rawValue] = self.name
@@ -44,7 +44,7 @@ struct PartyParrot {
         return userInfo
     }
     
-    static var nonstandardParrots: [PartyParrot] {
+    public static var nonstandardParrots: [PartyParrot] {
         return [
             PartyParrot(name: "Aussie Parrot", gif: .aussieparrot),
             PartyParrot(name: "Bored Parrot", gif: .boredparrot),
@@ -63,14 +63,14 @@ struct PartyParrot {
 
 extension PartyParrot: Equatable {
 
-    static func ==(lhs: PartyParrot, rhs: PartyParrot) -> Bool {
+    public static func ==(lhs: PartyParrot, rhs: PartyParrot) -> Bool {
         return lhs.name == rhs.name
             && lhs.gif == rhs.gif
         
     }
 }
 
-enum ParrotGif: String {
+public enum ParrotGif: String {
     case
     aussieparrot,
     boredparrot,
@@ -94,7 +94,7 @@ enum ParrotGif: String {
     sadparrot,
     slowparrot
     
-    var animated: UIImage {
+    public var animated: UIImage {
         guard let gif = UIImage.dns_gifWith(name: self.rawValue) else {
             fatalError("Could not load gif for \(self.rawValue)")
         }
@@ -102,7 +102,7 @@ enum ParrotGif: String {
         return gif
     }
     
-    static var wave: [UIImage] {
+    public static var wave: [UIImage] {
         return [
             self.parrotwave1.animated,
             self.parrotwave2.animated,

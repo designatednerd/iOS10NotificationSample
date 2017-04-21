@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ParrotKit
 import UIKit
 
 //MARK: Protocol declaration

@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ParrotCollectionViewCell: UICollectionViewCell {
+public class ParrotCollectionViewCell: UICollectionViewCell {
 
-    static let identifier = "ParrotCell"
+    public static let identifier = "ParrotCell"
     
     @IBOutlet private var imageView: UIImageView!
     
-    var parrot: PartyParrot? {
+    public var parrot: PartyParrot? {
         didSet {
             imageView.image = parrot?.gif.animated
         }

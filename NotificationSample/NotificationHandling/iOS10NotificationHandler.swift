@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ParrotKit
 import UserNotifications
 
 // NOTE: This must inherit from NSObject to be able to conform to UNUserNotificationCenterDelegate
