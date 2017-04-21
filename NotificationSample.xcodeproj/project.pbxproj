@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330C20B31EAA995300A68782 /* ParrotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330C20B21EAA995300A68782 /* ParrotCollectionViewCell.xib */; };
 		3314C5051D77DFED00F5549E /* iOS10NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314C5021D77DFED00F5549E /* iOS10NotificationHandler.swift */; };
 		3314C5061D77DFED00F5549E /* iOS9AndBelowNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314C5031D77DFED00F5549E /* iOS9AndBelowNotificationHandler.swift */; };
 		3314C5071D77DFED00F5549E /* VersionSpecificNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314C5041D77DFED00F5549E /* VersionSpecificNotificationHandler.swift */; };
@@ -121,6 +122,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		330C20B21EAA995300A68782 /* ParrotCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParrotCollectionViewCell.xib; sourceTree = "<group>"; };
 		3314C5021D77DFED00F5549E /* iOS10NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOS10NotificationHandler.swift; sourceTree = "<group>"; };
 		3314C5031D77DFED00F5549E /* iOS9AndBelowNotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOS9AndBelowNotificationHandler.swift; sourceTree = "<group>"; };
 		3314C5041D77DFED00F5549E /* VersionSpecificNotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionSpecificNotificationHandler.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				33FED1E01EAA63F10058DB0F /* ParrotCollectionViewCell.swift */,
+				330C20B21EAA995300A68782 /* ParrotCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				33FED2261EAA6C990058DB0F /* slowparrot.gif in Resources */,
 				33FED2221EAA6C990058DB0F /* sadparrot.gif in Resources */,
 				33FED20B1EAA6C990058DB0F /* chillparrot.gif in Resources */,
+				330C20B31EAA995300A68782 /* ParrotCollectionViewCell.xib in Resources */,
 				33FED21B1EAA6C990058DB0F /* parrotwave4.gif in Resources */,
 				33FED2111EAA6C990058DB0F /* gothparrot.gif in Resources */,
 				33FED2071EAA6C990058DB0F /* aussiecongaparrot.gif in Resources */,
@@ -972,6 +976,7 @@
 				33FED1CD1EAA62470058DB0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

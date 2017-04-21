@@ -12,6 +12,11 @@ public class ParrotCollectionViewCell: UICollectionViewCell {
 
     public static let identifier = "ParrotCell"
     
+    public static func register(with collectionView: UICollectionView) {
+        let nib = UINib(nibName: String(describing: self), bundle: Bundle(for: self))
+        collectionView.register(nib, forCellWithReuseIdentifier: self.identifier)
+    }
+    
     @IBOutlet private var imageView: UIImageView!
     
     public var parrot: PartyParrot? {

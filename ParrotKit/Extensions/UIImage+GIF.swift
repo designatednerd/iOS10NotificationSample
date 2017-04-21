@@ -103,8 +103,8 @@ extension UIImage {
     
     static func dns_gifWith(name: String) -> UIImage? {
         // Check for existance of gif
-        guard let bundleURL = Bundle.main
-            .url(forResource: name, withExtension: "gif") else {
+        let bundle = Bundle(for: ClassForParrotKitBundle.self)
+        guard let bundleURL = bundle.url(forResource: name, withExtension: "gif") else {
                 assertionFailure("No gif named \"\(name)\" in the main bundle")
                 return nil
         }
@@ -117,4 +117,8 @@ extension UIImage {
         
         return dns_gifWith(data: imageData)
     }
+}
+
+private class ClassForParrotKitBundle {
+    // Doesn't do anything, but lets us easily grab the correct bundle
 }

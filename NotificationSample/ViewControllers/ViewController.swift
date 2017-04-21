@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ParrotCollectionViewCell.register(with: self.collectionView)
+        
         // That other kind of notification
         NotificationCenter
             .default

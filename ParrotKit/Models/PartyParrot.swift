@@ -94,6 +94,11 @@ public enum ParrotGif: String {
     sadparrot,
     slowparrot
     
+    public var imageURL: URL? {
+        let bundle = Bundle(for: ParrotCollectionViewCell.self)
+        return bundle.url(forResource: self.rawValue, withExtension: "gif")
+    }
+    
     public var animated: UIImage {
         guard let gif = UIImage.dns_gifWith(name: self.rawValue) else {
             fatalError("Could not load gif for \(self.rawValue)")
