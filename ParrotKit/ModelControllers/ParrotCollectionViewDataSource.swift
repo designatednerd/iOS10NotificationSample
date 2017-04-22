@@ -19,6 +19,7 @@ class ParrotCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        debugPrint("Parrots: \(self.parrots.count)")
         return self.parrots.count
     }
     
