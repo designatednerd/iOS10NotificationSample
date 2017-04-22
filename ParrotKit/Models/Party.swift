@@ -11,9 +11,11 @@ import Foundation
 public struct Party {
     
     public static var current = Party()
-    private init() { }
+    private init() {
+        self.parrots = UserDefaultsWrapper.storedParty()
+    }
     
-    public var parrots = [PartyParrot]()
+    public var parrots: [PartyParrot]
     
     private func postUpdateNotification() {
         NotificationCenter
@@ -22,18 +24,20 @@ public struct Party {
                   object: nil)
     }
     
+    public mutating func reloadFromDefaults() {
+        self.parrots = UserDefaultsWrapper.storedParty()
+        self.postUpdateNotification()
+    }
+    
     public mutating func add(_ parrotToAdd: PartyParrot) {
         self.parrots.append(parrotToAdd)
+        UserDefaultsWrapper.storeParty(self.parrots)
         self.postUpdateNotification()
     }
     
     public mutating func block(_ parrotToBlock: PartyParrot) {
         self.parrots = self.parrots.filter { $0 != parrotToBlock }
+        UserDefaultsWrapper.storeParty(self.parrots)
         self.postUpdateNotification()
     }
-}
-
-public extension Notification.Name {
-    
-    public static let PartyUpdated = Notification.Name(rawValue: "PartyUpdated")
 }

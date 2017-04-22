@@ -25,6 +25,7 @@
 		33DC4B611D7864F800E0DB7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC4B601D7864F800E0DB7F /* ViewController.swift */; };
 		33DC4B631D78650600E0DB7F /* NotificationPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC4B621D78650600E0DB7F /* NotificationPromptViewController.swift */; };
 		33E1C05A1EAB9FD600AFF51A /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1C0591EAB9FD600AFF51A /* UserDefaultsWrapper.swift */; };
+		33E1C05C1EABA67200AFF51A /* NotificationName+Parrots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1C05B1EABA67200AFF51A /* NotificationName+Parrots.swift */; };
 		33FED1C61EAA62470058DB0F /* ParrotKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 33FED1C41EAA62470058DB0F /* ParrotKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33FED1C91EAA62470058DB0F /* ParrotKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FED1C21EAA62470058DB0F /* ParrotKit.framework */; };
 		33FED1CA1EAA62470058DB0F /* ParrotKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33FED1C21EAA62470058DB0F /* ParrotKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -148,6 +149,7 @@
 		33E1C0531EAB9F5100AFF51A /* NotificationContent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationContent.entitlements; sourceTree = "<group>"; };
 		33E1C0541EAB9F6400AFF51A /* NotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationService.entitlements; sourceTree = "<group>"; };
 		33E1C0591EAB9FD600AFF51A /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		33E1C05B1EABA67200AFF51A /* NotificationName+Parrots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationName+Parrots.swift"; sourceTree = "<group>"; };
 		33FED1C21EAA62470058DB0F /* ParrotKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ParrotKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FED1C41EAA62470058DB0F /* ParrotKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParrotKit.h; sourceTree = "<group>"; };
 		33FED1C51EAA62470058DB0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				33FED1DA1EAA62740058DB0F /* UIImage+GIF.swift */,
+				33E1C05B1EABA67200AFF51A /* NotificationName+Parrots.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				33FED1E11EAA63F10058DB0F /* ParrotCollectionViewCell.swift in Sources */,
 				33FED1D81EAA625E0058DB0F /* PartyParrot.swift in Sources */,
 				33FED1D51EAA625E0058DB0F /* GreatestCommonDenominator.swift in Sources */,
+				33E1C05C1EABA67200AFF51A /* NotificationName+Parrots.swift in Sources */,
 				33E1C05A1EAB9FD600AFF51A /* UserDefaultsWrapper.swift in Sources */,
 				33FED1E31EAA661B0058DB0F /* ParrotAction.swift in Sources */,
 				33FED1D41EAA625E0058DB0F /* Friends.swift in Sources */,

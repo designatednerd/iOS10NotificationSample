@@ -25,6 +25,9 @@ class NotificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Party.current.reloadFromDefaults()
+        Friends.mine.reloadFromDefaults()
+        
         ParrotCollectionViewCell.register(with: self.partyCollectionView)
         ParrotCollectionViewCell.register(with: self.friendsCollectionView)
     }
