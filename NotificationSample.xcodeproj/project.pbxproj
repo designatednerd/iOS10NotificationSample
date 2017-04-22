@@ -24,6 +24,7 @@
 		336C7B2C1D6168330037150A /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 336C7B251D6168330037150A /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		33DC4B611D7864F800E0DB7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC4B601D7864F800E0DB7F /* ViewController.swift */; };
 		33DC4B631D78650600E0DB7F /* NotificationPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC4B621D78650600E0DB7F /* NotificationPromptViewController.swift */; };
+		33E1C05A1EAB9FD600AFF51A /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1C0591EAB9FD600AFF51A /* UserDefaultsWrapper.swift */; };
 		33FED1C61EAA62470058DB0F /* ParrotKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 33FED1C41EAA62470058DB0F /* ParrotKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33FED1C91EAA62470058DB0F /* ParrotKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FED1C21EAA62470058DB0F /* ParrotKit.framework */; };
 		33FED1CA1EAA62470058DB0F /* ParrotKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33FED1C21EAA62470058DB0F /* ParrotKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -143,6 +144,10 @@
 		336C7B291D6168330037150A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33DC4B601D7864F800E0DB7F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33DC4B621D78650600E0DB7F /* NotificationPromptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationPromptViewController.swift; sourceTree = "<group>"; };
+		33E1C0521EAB9F2300AFF51A /* NotificationSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationSample.entitlements; sourceTree = "<group>"; };
+		33E1C0531EAB9F5100AFF51A /* NotificationContent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationContent.entitlements; sourceTree = "<group>"; };
+		33E1C0541EAB9F6400AFF51A /* NotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationService.entitlements; sourceTree = "<group>"; };
+		33E1C0591EAB9FD600AFF51A /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 		33FED1C21EAA62470058DB0F /* ParrotKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ParrotKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FED1C41EAA62470058DB0F /* ParrotKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParrotKit.h; sourceTree = "<group>"; };
 		33FED1C51EAA62470058DB0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -261,6 +266,7 @@
 		336C7AF61D6167AC0037150A /* NotificationSample */ = {
 			isa = PBXGroup;
 			children = (
+				33E1C0521EAB9F2300AFF51A /* NotificationSample.entitlements */,
 				336C7AF71D6167AC0037150A /* AppDelegate.swift */,
 				3314C5011D77DFED00F5549E /* NotificationHandling */,
 				33DC4B5F1D7864F800E0DB7F /* ViewControllers */,
@@ -284,6 +290,7 @@
 		336C7B131D61680D0037150A /* NotificationContent */ = {
 			isa = PBXGroup;
 			children = (
+				33E1C0531EAB9F5100AFF51A /* NotificationContent.entitlements */,
 				336C7B141D61680D0037150A /* NotificationViewController.swift */,
 				336C7B161D61680D0037150A /* MainInterface.storyboard */,
 				336C7B191D61680D0037150A /* Info.plist */,
@@ -294,6 +301,7 @@
 		336C7B261D6168330037150A /* NotificationService */ = {
 			isa = PBXGroup;
 			children = (
+				33E1C0541EAB9F6400AFF51A /* NotificationService.entitlements */,
 				336C7B271D6168330037150A /* NotificationService.swift */,
 				336C7B291D6168330037150A /* Info.plist */,
 			);
@@ -309,12 +317,21 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		33E1C0561EAB9F9900AFF51A /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				33E1C0591EAB9FD600AFF51A /* UserDefaultsWrapper.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
 		33FED1C31EAA62470058DB0F /* ParrotKit */ = {
 			isa = PBXGroup;
 			children = (
 				33FED1C41EAA62470058DB0F /* ParrotKit.h */,
 				33FED1D91EAA62740058DB0F /* Extensions */,
 				33FED1CE1EAA625E0058DB0F /* Models */,
+				33E1C0561EAB9F9900AFF51A /* ModelControllers */,
 				33FED1DC1EAA628B0058DB0F /* Networking */,
 				33FED1DF1EAA63F10058DB0F /* Views */,
 				33FED1E61EAA6C990058DB0F /* parrots */,
@@ -503,16 +520,31 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 4U392EMNT3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					336C7B0C1D61680D0037150A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 4U392EMNT3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					336C7B241D6168330037150A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 4U392EMNT3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					33FED1C11EAA62470058DB0F = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -647,6 +679,7 @@
 				33FED1E11EAA63F10058DB0F /* ParrotCollectionViewCell.swift in Sources */,
 				33FED1D81EAA625E0058DB0F /* PartyParrot.swift in Sources */,
 				33FED1D51EAA625E0058DB0F /* GreatestCommonDenominator.swift in Sources */,
+				33E1C05A1EAB9FD600AFF51A /* UserDefaultsWrapper.swift in Sources */,
 				33FED1E31EAA661B0058DB0F /* ParrotAction.swift in Sources */,
 				33FED1D41EAA625E0058DB0F /* Friends.swift in Sources */,
 				33FED1E51EAA66950058DB0F /* NotificationCategory.swift in Sources */,
@@ -803,6 +836,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NotificationSample/NotificationSample.entitlements;
 				DEVELOPMENT_TEAM = 4U392EMNT3;
 				INFOPLIST_FILE = NotificationSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -818,6 +852,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NotificationSample/NotificationSample.entitlements;
 				DEVELOPMENT_TEAM = 4U392EMNT3;
 				INFOPLIST_FILE = NotificationSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -831,6 +866,7 @@
 		336C7B1E1D61680D0037150A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NotificationContent/NotificationContent.entitlements;
 				DEVELOPMENT_TEAM = 4U392EMNT3;
 				INFOPLIST_FILE = NotificationContent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -844,6 +880,7 @@
 		336C7B1F1D61680D0037150A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NotificationContent/NotificationContent.entitlements;
 				DEVELOPMENT_TEAM = 4U392EMNT3;
 				INFOPLIST_FILE = NotificationContent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -857,6 +894,7 @@
 		336C7B2E1D6168330037150A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
 				DEVELOPMENT_TEAM = 4U392EMNT3;
 				INFOPLIST_FILE = NotificationService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -870,6 +908,7 @@
 		336C7B2F1D6168330037150A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
 				DEVELOPMENT_TEAM = 4U392EMNT3;
 				INFOPLIST_FILE = NotificationService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
