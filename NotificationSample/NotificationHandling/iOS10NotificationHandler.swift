@@ -114,12 +114,52 @@ extension iOS10NotificationHandler: VersionSpecificNotificationHandler {
         }
     }
     
+    private func copyImageToCaches(for parrot: PartyParrot) -> URL? {
+        // Get the URL of the item in the kit bundle
+        guard let imageURL = parrot.gif.imageURL else {
+            assertionFailure("No image!")
+            return nil
+        }
+        guard let caches = NSSearchPathForDirectoriesInDomains(.cachesDirectory,
+                                                               .userDomainMask,
+                                                               true).first else {
+                                                                assertionFailure("Couldn't access caches folder!")
+                                                                return nil
+        }
+        
+        let destination = caches + "/" + parrot.gif.rawValue + ".gif"
+        let destinationURL = URL(fileURLWithPath: destination)
+        let fileManager = FileManager.default
+        
+        if !fileManager.fileExists(atPath: destinationURL.path) {
+            do {
+                try fileManager.copyItem(at: imageURL, to: destinationURL)
+            } catch let error {
+                debugPrint("Error copying file: \(error)")
+                return nil
+            }
+        
+        } // else, it's already in the cache.
+                
+        return destinationURL
+    }
+    
     func scheduleNotification(for parrot: PartyParrot, delay: TimeInterval) {
-        guard
-            let imageURL = Bundle.main.url(forResource: parrot.gif.rawValue, withExtension: "gif"),
-            let attachment = try? UNNotificationAttachment(identifier: parrot.gif.rawValue,
-                                                           url: imageURL,
-                                                           options: .none) else {
+        // When scheduling, the image must be within the main bundle so it can
+        // then get copied into the notification's space. Trying to load
+        // directly from the framework bundle gets you an "Invalid attachment 
+        // file URL" error.
+        guard let copiedURL = self.copyImageToCaches(for: parrot) else {
+            return
+        }
+        
+        let attachment: UNNotificationAttachment
+        do {
+            attachment = try UNNotificationAttachment(identifier: parrot.gif.rawValue,
+                                                      url: copiedURL,
+                                                      options: .none)
+        } catch let error {
+            debugPrint("Error creating attachment: \(error)")
             return
         }
         
