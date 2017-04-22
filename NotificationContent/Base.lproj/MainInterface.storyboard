@@ -18,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rso-8b-KJP">
-                                <rect key="frame" x="10" y="130" width="300" height="270"/>
+                                <rect key="frame" x="10" y="130" width="300" height="290"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Notification Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Quw-7p-Tdb">
                                         <rect key="frame" x="0.0" y="0.0" width="136.5" height="20.5"/>
@@ -30,27 +30,33 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Notification Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6w-Eg-ZwY">
+                                        <rect key="frame" x="0.0" y="24.5" width="151.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Notification Content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
-                                        <rect key="frame" x="0.0" y="24.5" width="154" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="49" width="154" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eU7-dG-zgX">
-                                        <rect key="frame" x="0.0" y="49" width="300" height="1"/>
+                                        <rect key="frame" x="0.0" y="73.5" width="300" height="1"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="nXt-KL-WWV"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="My Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQe-NE-9sa">
-                                        <rect key="frame" x="0.0" y="54" width="85" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="78.5" width="85" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L25-pR-y1j">
-                                        <rect key="frame" x="0.0" y="78.5" width="300" height="70"/>
+                                        <rect key="frame" x="0.0" y="103" width="300" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="eZB-1a-AY0"/>
@@ -67,13 +73,13 @@
                                         </connections>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Party" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELT-i2-29R">
-                                        <rect key="frame" x="0.0" y="152.5" width="68" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="177" width="68" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pIg-HZ-fwv">
-                                        <rect key="frame" x="0.0" y="200" width="300" height="70"/>
+                                        <rect key="frame" x="0.0" y="220" width="300" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="cGr-lO-Arp"/>
@@ -117,12 +123,13 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="400"/>
+                    <size key="freeformSize" width="320" height="420"/>
                     <connections>
                         <outlet property="contentLabel" destination="GcN-lo-r42" id="tnG-gO-3AZ"/>
                         <outlet property="friendsCollectionView" destination="L25-pR-y1j" id="R7c-XI-2ed"/>
                         <outlet property="parrotImageView" destination="WtE-DX-eq1" id="aGc-D5-k3C"/>
                         <outlet property="partyCollectionView" destination="pIg-HZ-fwv" id="Tqm-fA-HyL"/>
+                        <outlet property="subtitleLabel" destination="c6w-Eg-ZwY" id="G7Y-wa-DyU"/>
                         <outlet property="titleLabel" destination="Quw-7p-Tdb" id="4g6-9u-wrg"/>
                     </connections>
                 </viewController>

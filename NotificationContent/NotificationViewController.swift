@@ -15,6 +15,7 @@ class NotificationViewController: UIViewController {
 
     @IBOutlet fileprivate var parrotImageView: UIImageView!
     @IBOutlet fileprivate var titleLabel: UILabel!
+    @IBOutlet fileprivate var subtitleLabel: UILabel!
     @IBOutlet fileprivate var contentLabel: UILabel!
     @IBOutlet private var partyCollectionView: UICollectionView!
     @IBOutlet private var friendsCollectionView: UICollectionView!
@@ -35,6 +36,7 @@ extension NotificationViewController: UNNotificationContentExtension {
     func didReceive(_ notification: UNNotification) {
         self.contentLabel.text = notification.request.content.body
         self.titleLabel.text = notification.request.content.title
+        self.subtitleLabel.text = notification.request.content.subtitle
         
         guard let parrot = PartyParrot(userInfo: notification.request.content.userInfo) else {
             assertionFailure("Couldn't create parrot from user info!")
